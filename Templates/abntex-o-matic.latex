@@ -1,0 +1,639 @@
+\NeedsTeXFormat{LaTeX2e}
+
+
+\documentclass[paper=a4,
+           oneside,
+           pagesize,
+           13pt,
+           DIV=10,                % TODO: Make configurable
+           BCOR=10mm,             % TODO: Make configurable
+           cleardoublepage=empty,
+           numbers=noenddot,
+           titlepage,
+           toc=bibliography,
+           toc=index,]{scrbook}
+
+
+
+\RequirePackage{ifpdf}
+\RequirePackage{ifxetex}
+\RequirePackage{ifluatex}
+
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+\ifxetexorluatex
+  \RequirePackage{fontspec}
+\else
+  \RequirePackage[utf8]{inputenc}
+\fi
+
+% Makes it possible to switch between different languages in the text
+% while keeping hyphenation rules correct. Should you add another one
+% in the list, please ensure that `english` is the last one. The last
+% language is used to control standard hyphenation.
+\usepackage[ngerman,french,english,brazil]{babel}
+
+\RequirePackage{csquotes} % Context-sensitive quotation marks
+\RequirePackage{makeidx}  % For creating indices
+\RequirePackage{xspace}   % For automatically "eating" spaces
+\usepackage{multicol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Multi-line comments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\comment}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fonts & colours
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage[usenames,dvipsnames]{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Graphics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{graphicx}
+\graphicspath{%
+  {Figures/}
+  {./}
+}
+
+% Suppress warnings about page groups in PDFs. This is not justified
+% in most of the cases. I am pretty sure I am including my images in
+% the right manner.
+\begingroup\expandafter\expandafter\expandafter\endgroup
+\expandafter\ifx\csname pdfsuppresswarningpagegroup\endcsname\relax
+\else
+  \pdfsuppresswarningpagegroup=1\relax
+\fi
+
+\RequirePackage{subcaption}
+
+% Make sub-references using \subref being typeset with parentheses.
+% Otherwise, only the counter will be printed.
+\captionsetup{subrefformat=parens}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paragraph lists & compact enumerations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage[%
+    olditem,  % Do not modify itemize environments by default
+    oldenum   % Do not modify enumerate environments by default
+  ]{paralist}
+  
+
+	\usepackage{paracol}
+	\newcommand{\grc}[1]{\textgreek{#1}}
+	\newcommand{\pt}[1]{\textportuges{#1}}
+
+
+%%%		COLUNAS PARALELAS
+% TODO: Comandos paracol
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Spacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Proper typesetting of units
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage[binary-units=true]{siunitx}
+
+\sisetup{%
+  detect-all           = true,
+  detect-family        = true,
+  detect-mode          = true,
+  detect-shape         = true,
+  detect-weight        = true,
+  detect-inline-weight = math,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathematics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{dsfont}
+
+% Fix the spacing of \left and \right. Use these with the proper bracket
+% in order to ensure that they scale automatically.
+\let\originalleft\left
+\let\originalright\right
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+\renewcommand{\right}{\aftergroup\egroup\originalright}
+
+\DeclareMathOperator*{\argmin}          {arg\,min}
+\DeclareMathOperator {\dist}            {dist}
+\DeclareMathOperator {\im}              {im}
+
+\newcommand{\domain}{\ensuremath{\mathds{D}}}
+\newcommand{\real}  {\ensuremath{\mathds{R}}}
+
+% Proper differential operators
+\newcommand{\diff}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ordinals
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand  {\st}{\textsuperscript{\textup{st}}\xspace}
+\newcommand  {\rd}{\textsuperscript{\textup{rd}}\xspace}
+\newcommand  {\nd}{\textsuperscript{\textup{nd}}\xspace}
+\renewcommand{\th}{\textsuperscript{\textup{th}}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Penalties
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clubpenalty         = 10000
+\widowpenalty        = 10000
+\displaywidowpenalty = 10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Headers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\renewcommand*{\chaptermarkformat}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Typefaces for parts, chapters, and sections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\partformat}{\huge\partname~\thepart\autodot}
+\renewcommand{\raggedpart}{\flushleft}
+
+\setkomafont{part}{\normalfont\huge\scshape}
+
+\setkomafont{sectioning}{\normalfont\scshape}
+\setkomafont{descriptionlabel}{\normalfont\bfseries}
+
+\setkomafont{caption}{\small}
+\setkomafont{captionlabel}{\usekomafont{caption}}
+
+% Large number for chapter
+\renewcommand*{\chapterformat}{%
+  \fontsize{50}{55}\selectfont\thechapter\autodot\enskip
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Some of my favourite personal adjustments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% These are the adjustments that I consider necessary for typesetting
+% a nice thesis. However, they are *not* included in the template, as
+% I do not want to force you to use them.
+
+% This ensures that I am able to typeset bold font in table while still aligning the numbers
+% correctly.
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\singlespacing\small}
+\renewenvironment{quote}{%
+   \list{}{%
+     \leftmargin4cm   % this is the adjusting screw
+     \rightmargin0cm
+   }
+   \item\relax
+}
+{\endlist}
+
+
+\AtBeginEnvironment{paracol}{\singlespacing\small}
+
+\usepackage[binary-units=true]{siunitx}
+\DeclareSIUnit\px{px}
+
+\sisetup{%
+  detect-all           = true,
+  detect-family        = true,
+  detect-mode          = true,
+  detect-shape         = true,
+  detect-weight        = true,
+  detect-inline-weight = math,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hyperlinks & bookmarks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[%
+  colorlinks = true,
+  citecolor  = $if(citecolor)$ $citecolor$ $else$ RoyalBlue $endif$,
+  linkcolor  = $if(linkcolor)$ $linkcolor$ $else$ RoyalBlue $endif$,
+  urlcolor   = $if(urlcolor)$ $urlcolor$ $else$ RoyalBlue $endif$,
+  ]{hyperref}
+
+\usepackage{bookmark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% I like the bibliography to be extremely plain, showing only a numeric
+% identifier and citing everything in simple brackets. The first names,
+% if present, will be initialized. DOIs and URLs will be preserved.
+
+
+%\input{bibliography-mimosis}
+%\bibliography{Thesis}
+
+$if(natbib)$
+\usepackage[$natbiboptions$]{natbib}
+\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+$endif$
+$if(biblatex)$
+\usepackage[$if(biblio-style)$style=$it$,$endif$$for(biblatexoptions)$$it$$sep$,$endfor$]{biblatex}
+$for(bibliography)$
+\addbibresource{$bibliography$}
+$endfor$
+$endif$
+$if(csl-refs)$
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+  \newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{1em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+$endif$
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fonts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\ifxetexorluatex
+ 	$if(mainfont)$
+  		\setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
+		$else$
+		\setmainfont[Ligatures=TeX]{Minion Pro}
+	$endif$
+$if(sansfont)$
+  \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
+$endif$
+$if(monofont)$
+  \setmonofont[$for(monofontoptions)$$monofontoptions$$sep$,$endfor$]{$monofont$}
+$endif$
+
+
+\renewcommand{\th}{\textsuperscript{\textup{th}}\xspace}
+
+
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=brazilian]{portuguese}
+\setotherlanguage[variant=ancient]{greek}
+\usepackage{metalogo}
+\usepackage[doublespacing]{setspace}
+\usepackage{array}
+\usepackage{epigraph}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Incipit
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{$titulo$}
+\subtitle{$subtitulo$}
+\author{$autor$}
+
+\begin{document}
+
+\frontmatter
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \include{Sources/Title}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{titlepage}
+  \makeatletter
+  \begin{center}
+     \textsc{$faculdade$}\\
+   \vspace*{2cm}
+        \@author \\ 
+   \vspace*{2cm}
+    \begin{Huge}
+      \@title \\
+    \end{Huge}
+    %
+    \vspace*{1cm}
+    \begin{Large}
+      \@subtitle 
+    \end{Large}
+       %
+    \vfill
+    $lugar$ \\ $ano$
+ 
+   
+
+\newpage
+\thispagestyle{empty}  
+
+    \@author \\ 
+    \vfill
+    \begin{Huge}
+      \@title \\
+    \end{Huge}
+  
+    \vspace*{1,5cm}
+	\begin{quote} 
+   $tipodetrabalho$ apresentada ao programa de Pós-Graduação em $curso$ da $faculdade$, como requisito parcial para a obtenção do título de \emph{$grau$} em $curso$.
+   	\end{quote} 
+      \vspace*{2cm}
+      \begin{flushright}
+      	Orientador: $orientador$ \\
+      	Linha de Pesquisa: $linhadepesquisa$ \\
+      \end{flushright}
+       %
+    \vfill
+        $lugar$ \\ $ano$
+  \end{center}
+  \makeatother
+\end{titlepage}
+
+\newpage
+\null
+\thispagestyle{empty}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \include{Sources/Abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+$if(dedicatoria)$
+
+	\clearpage
+	\thispagestyle{empty}  
+
+	\mbox{}
+	\vfill
+	
+	\begin{flushright}
+		\emph{$dedicatoria$}
+	\end{flushright}
+
+$endif$
+
+
+
+
+$if(agradecimentos)$
+
+	\clearpage
+	\thispagestyle{empty}  
+
+	\begin{center}
+		\textsc{Agradecimentos}
+	\end{center}
+
+	$agradecimentos$
+
+	{\vfil}{}{}{}
+
+$endif$
+
+
+
+
+$if(epigrafe)$
+
+	\clearpage
+	\thispagestyle{empty}  
+
+	\begin{quote} 
+	\begin{flushright}
+	
+		$epigrafe$
+
+	\end{flushright}
+	\end{quote} 
+	{\vfil}{}{}{}
+
+$endif$
+
+
+
+
+$if(advertencia)$
+
+	\clearpage
+	\thispagestyle{empty}  
+
+	\begin{center}
+		\textsc{Advertência}
+	\end{center}
+
+	$advertencia$
+
+$endif$
+
+
+
+
+$if(resumo)$
+$if(abstract)$
+
+	\clearpage
+	\thispagestyle{empty}  
+	
+	$if(resumo)$
+		
+		\begin{center}
+		  \textsc{Resumo}
+		\end{center}
+
+		$resumo$
+
+	$endif$
+
+
+	$if(abstract)$
+		
+		\begin{center}
+			\textsc{Abstract}
+		\end{center}
+
+		$abstract$
+		{\vfil}{}{}{}
+
+	$endif$
+
+$endif$
+$endif$
+
+
+
+
+
+$if(abreviacoes)$
+
+
+	\clearpage
+	\thispagestyle{empty}  
+ 
+	\begin{center}
+		\textsc{Lista de Abreviações}
+	\end{center}
+
+	\begin{multicols}{2}
+	\begin{onehalfspace}
+	\begin{flushleft}
+		$abreviacoes$
+	\end{flushleft}
+	\end{onehalfspace}
+	\end{multicols}
+
+$endif$
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table of contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{onehalfspace}
+	\clearpage
+	\tableofcontents
+ \end{onehalfspace}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main matter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+%\include{Sources/Introduction}
+
+  \clearpage
+	$body$
+
+% This ensures that the subsequent sections are being included as root
+% items in the bookmark structure of your PDF reader.
+\bookmarksetup{startatroot}
+\backmatter
+
+  \begingroup
+    \let\clearpage\relax
+
+    
+  \endgroup
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \printbibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+$if(natbib)$
+$if(bibliography)$
+
+
+  
+  \bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+
+
+
+$endif$
+$endif$
+
+$if(biblatex)$
+
+	\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+	
+$endif$
+
+$for(include-after)$
+	$include-after$
+$endfor$
+
+%  \printglossary
+
+  \printindex
+ 
+\newpage
+\thispagestyle{empty}  
+
+
+\begin{center}
+\begin{onehalfspace}
+	\mbox{}
+	\vfill
+Compilado usando \emph{ABNTex-o-matic} para\\
+ \vspace*{0cm}		
+		\begin{Huge} 
+			\LaTeX \\ 
+		\end{Huge}
+ \vspace*{0,5cm}		
+
+$if(compiled)$ Em $compiled$ $endif$
+		 
+\end{onehalfspace}		
+\end{center}
+
+\end{document}

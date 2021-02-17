@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchIndexes Version="1.0">
+    <Documents>
+        <Document ID="A2B41CBB-24BD-418D-A5F0-C127C3176884">
+            <Title>Estrutura</Title>
+            <Text>O Pandoc entende os seguintes níveis de estrutura:
+
+0. Parte
+1. Capítulo
+2. Seção
+3. Subseção
+4. Parágrafo
+
+Nesse template, o nível mais alto é "1. Capítulo" e o mais baixo é "4. Parágrafo". Para mudar essa configuração, e incluir a possibilidade de dividir o texto utilizando partes, consulte a documentação do Pandoc (procure por --top-level-division no texto) e faça as modificações necessárias.
+As opções para estruturar o texto
+Há dois caminhos possíveis: utilizando estilos ou utilizando os tipos de seção.
+Estilos
+Atribua algum dos seguintes estilos às frases que devem servir de cabeçalho:
+- Cabeçalho 1
+- Cabeçalho 1 {-}
+- Cabeçalho 2
+- Cabeçalho 3
+- Cabeçalho 4
+Atribua o tipo de seção Corpo do Texto a todos os arquivos e não deixe de preencher as páginas dos Elementos pré-textuais.
+Tipos de seção (recomendado)
+Na aba de metadados do inspetor (Navigate &gt; Inspect &gt; Metadata) ou no modo de visualização de contorno (⌘3) atribua o tipo de seção adequado ao arquivo ou então deixe o próprio Scrivener atribuir automaticamente o tipo adequado baseado na posição do arquivo no Binder. Arquivos de primeiro nível na pasta Manuscrito aparecerão como capítulos; arquivos de segundo nível, como seções; de terceiro nível, como subseções; de quarto nível, como parágrafos. Para maiores informações, veja Tipos de seção.</Text>
+        </Document>
+        <Document ID="7F66DD17-85AB-4F58-893B-14BC0F85E4D4">
+            <Title>Seção 1</Title>
+            <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (@Metaph_Ross_a, p. 134).</Text>
+        </Document>
+        <Document ID="80C8AD27-42D1-4249-9730-36F5AF6757F9">
+            <Title>Seção 2</Title>
+            <Text>Lorem ipsum dolor sit amet (@Rossi2013, p. 10), consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+        </Document>
+        <Document ID="85653140-9FD1-4FF6-98F7-4DF848572C44">
+            <Title>Pandocomatic</Title>
+            <Text>Em breve.</Text>
+        </Document>
+        <Document ID="C9B4DC23-58DA-4C15-A7D8-7237A95BD626">
+            <Title>Sample (Alegreya)</Title>
+            <Text>FACULDADE DE FILOSOFIA E CIÊNCIAS HUMANAS DA UNIVERSIDADE FEDERAL DE MINAS GERAIS
+João Sebastião Ribeiro
+A insustentável leveza dos entes matemáticos
+Belo Horizonte - MG 2021
+
+João Sebastião Ribeiro
+A insustentável leveza dos entes matemáticos
+Tese apresentada ao programa de Pós-Graduação em Filo- sofia da Faculdade de Filosofia e Ciências Humanas da Uni- versidade Federal de Minas Gerais, como requisito parcial para a obtenção do título de Doutor em Filosofia.
+Orientador: Prof. Dr. Antonio Salieri Linha de Pesquisa: Filosofia Antiga e Medieval
+Belo Horizonte - MG 2021
+
+Dedico a tese ao verme que primeiro roer a fria carne de meu cadáver.
+
+AGRADECIMENTOS
+Ao Brasil, por eleger Bolsonaro e mostrar que o ruim sempre pode ficar pior.
+
+She should have died hereafter; There would have been a time for such a word. To-morrow, and to-morrow, and to-morrow, Creeps in this petty pace from day to day, To the last syllable of recorded time; And all our yesterdays have lighted fools The way to dusty death. Out, out, brief candle! Life is but a walking shadow, a poor player That struts and frets his hour upon the stage And then is heard no more. It is a tale Told by an idiot, full of sound and fury Signifying nothing.
+— Macbeth (Act 5, Scene 5, lines 17–28)
+
+ADVERTÊNCIA
+Este trabalho foi realizado com atenção às diretrizes da Associação Brasi- leira de Normas Técnicas (ABNT). No entanto, no que toca à citação e referência de autores antigos, seguimos as normas consagradas no meio dos Estudos Clássicos; isto é, citar os autores a partir da numeração presente na edição de referência do texto grego, e não a partir das traduções e edições recentes.
+
+Texto do resumo
+RESUMO
+ABSTRACT
+The content of the abstract
+
+Aristóteles
+APo - Analytica Posteriora APr - Analytica Priora Aud - de Audibilibus
+Cael - de Caelo
+Cat - Categoriae
+Col - de Coloribus
+DA - de Anima
+DivSomn - de Divinatione per Somnia EE - Ethica Eudemia
+EN - Ethica Nicomachea
+GA - de Generatione Animalium
+GC - de Generatione et Corruptione
+HA - Historia Animalium
+IA - de Incessu Animalium
+Insomn - de Insomniis
+Int - de Interpretatone
+Juv - de Juventute
+LI - de Lineis Insecabilibus
+Long - De Longitudine et Brevitate Vitae MA - de Motu Animalium
+MM - Magna Moralia
+Mech - Mechanica
+Mem - de Memoria
+Metaph - Metaphysica
+Mete - Meteorologica
+Mir - Mirabilia
+Mu - de Mundo
+Oec - Oeconomica
+PA - de Partibus Animalium Phys - Physica
+Phgn - Physiognomonica Poet - Poetica
+Pol - Politica
+Pr - Problemata
+Resp - de Respiratione
+Rhet - Rhetorica
+RhAl - Rhetorica ad Alexandrum SE - De Sophisticis Elenchis Sensu - de Sensu et Sensibilibus SomnVig - de Somno et Vigilia Spir - de Spiritu
+Top - Topica
+VV - de Virtutibus et Vitiis
+Vent - de Ventis
+Xen - de Xenophane
+Platão
+Apol - Apologia Charm - Cármides Crat - Crátilo
+Crit - Críton
+Euth - Eutidemo Euth - Eutífron Gorg - Górgias Lach - Laques Lg - Leis
+Lys - Lísis Men - Mênon
+LISTA DE ABREVIAÇÕES
+
+Parm - Parmênides Phae - Fedro
+Phae - Fédon Philb - Filebo
+Prot - Protágoras Rep - República
+Soph - Sofista State - Político Symp - Simpósio Thea - Teeteto Tim - Timeu
+ix
+
+SUMÁRIO
+1 CAPÍTULO1 1
+1.1 Seção1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2 Seção 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+2 CAPÍTULO2 3
+2.1 Seção1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2.2 Seção 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+BIBLIOGRAFIA
+5
+x
+
+1 CAPÍTULO1
+Introdução ao capítulo 1
+1.1 SEÇÃO1
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve- niam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com- modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (ROSS 1924, p. 134).
+1.2 SEÇÃO2
+Lorem ipsum dolor sit amet (ROSSI 2013, p. 10), consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+1
+
+Capítulo 1
+ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volup- tate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+2
+
+2 CAPÍTULO2
+Introdução ao capítulo 2
+2.1 SEÇÃO1
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve- niam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com- modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (CARR; STEUTEL 1999, p. 90).
+2.2 SEÇÃO2
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve- niam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com-
+3
+
+Capítulo 2
+modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (HAAS; MANSFELD 2004, p. 4).
+4
+
+BIBLIOGRAFIA
+ARISTÓTELES. Metaphysics. Ed.: W. D. Ross. v. 1 Oxford: Clarendon Press, 1924.
+CARR, D.; STEUTEL, J. (Eds.). Virtue ethics and moral education. London: Routledge, 1999.
+HAAS, F. DE; MANSFELD, J. (Eds.). Aristotle’ on generation and corruption book i. Oxford: OUP, 2004.
+ROSSI, G. Chance and accidental causes in aristotle: Metaph. E 3 in the light of the concept of tyche. [s.l: s.n.].
+5
+
+Compilado usando ABNTex-o-matic para
+LATEX Em 2021-02-17.
+</Text>
+        </Document>
+        <Document ID="C50E34A6-FC99-450E-9350-183B916D6C14">
+            <Title>Agradecimentos</Title>
+            <Text>Outros projetos que não foram mencionados, mas que tornaram o ABNTeX-o-matic possível:
+
+A inspiração veio do Scrivomatic e foi possível graças ao Pandocomatic.
+O template LaTeX veio em grande medida do Mimosis.
+Algumas ideias para a adaptação do template Mimosis para a ABNT vieram do Limarka.</Text>
+        </Document>
+        <Document ID="52AE15AD-FD89-4920-BFC3-AA76CE3208B5">
+            <Title>ABNTex-o-matic</Title>
+            <Text># Importante: arquivos YAML usam espaços em branco para representar a estrutura, então não use tabulações (tab) e lembre-se de deixar as aspas retas ("") e manter os nomes de todos os campos de metadados em caixa baixa.
+titulo: 'A insustentável leveza dos entes matemáticos'
+subtitulo:
+autor: 'João Sebastião Ribeiro'
+orientador: 'Prof. Dr. Antonio Salieri'
+faculdade: 'Faculdade de Filosofia e Ciências Humanas da Universidade Federal de Minas Gerais'
+lugar: 'Belo Horizonte - MG'
+ano: '2021'
+grau: 'Doutor'
+curso: 'Filosofia'
+tipodetrabalho: 'Tese'
+linhadepesquisa: 'Filosofia Antiga e Medieval'
+mainfont: 'Alegreya'
+citecolor: 'RoyalBlue'
+linkcolor: 'RoyalBlue'
+sansfont: 'Alegreya Sans'
+monofont: 'Menlo'
+urlcolor: 'RoyalBlue'
+compiled: &lt;$shortdate&gt;    
+book: true    
+top-level-division: chapter    
+pandocomatic_:    
+  use-template:    
+    - docx-refs-crossref    
+    - abntex-o-matic
+    - abntex-refs-crossref    
+#    - abntex-o-matic-pdf    
+#    - docx    
+#    - plain    
+#    - plain-refs    
+#    - plain-refs-crossref    
+#    - docx    
+#    - docx-refs    
+#    - docx-refs-nsfc    
+#    - docx-refs-crossref    
+#    - docx-refs-not-linked    
+#    - docx-endnote    
+#    - docx-changes    
+#    - abntex-o-matic    
+#    - abntex-o-matic-refs    
+#    - abntex-o-matic-refs-crossref    
+#    - abntex-o-matic-with-toc    
+#    - abntex-o-matic-with-lof    
+#    - abntex-o-matic-pdf-refs    
+#    - abntex-o-matic-pdf-refs-crossref    
+#    - odt-refs    
+#    - latex    
+#    - latex-refs    
+#    - latex-refs-crossref    
+#    - latex-endnote    
+#    - latex-chemfig     
+#    - pdf-endnote    
+#    - latex-ieee    
+#    - memoir-with-refs    
+#    - html    
+#    - html-selfcontained    
+#    - html-changes    
+#    - html-refs    
+#    - html-refs-crossref    
+#    - html-endnote    
+#    - html-scholar    
+#    - html-scholar-pdf    
+#    - html-pdf    
+#    - html-refs-pdf    
+#    - html-endnote-pdf    
+#    - tufte-refs    
+#    - tufte-refs-pdf    
+#    - epub-test     
+
+</Text>
+        </Document>
+        <Document ID="20DE5C57-F456-48E0-91E9-D62E00AFAE17">
+            <Title>Agradecimentos</Title>
+            <Synopsis>agradecimentos</Synopsis>
+            <Text>Ao Brasil, por eleger Bolsonaro e mostrar que o ruim sempre pode ficar pior.</Text>
+            <Notes>NÃO MODIFICAR O TEXTO DA SINOPSE!</Notes>
+        </Document>
+        <Document ID="9D2539A4-4C1F-4FE7-BD37-1350E0CC4257">
+            <Title>Tipos de seção</Title>
+            <Text>Configurações
+Exclusivo para o arquivo ABNTex-o-matic. 
+Detalhes técnicos: Esse tipo de seção apenas assegura que não haverá a intrusão de nenhum elemento além do que está contido nesse documento. Nele estão as instruções para o Pandocomatic em formato YAML.
+Elementos não-textuais
+Exclusivo para os arquivos da pasta Elementos pré-textuais. Lembre-se de aplicar o estilo "Elementos pré-textuais" ao texto
+Atenção: não apagar ou modificar o texto contido no campo da sinopse.
+Detalhes técnicos: Esse tipo de seção formata os itens da pasta como blocos de código YAML de modo que eles sejam passados adiante para o nosso template e sejam formatados corretamente no arquivo final.
+H1 Cabeçalho
+O nome do arquivo será o título do capítulo, mas o conteúdo do texto será ignorado (útil para permitir fazer anotações gerais sobre o capítulo que não devem entrar no trabalho final).
+H1 Capítulo
+O nome do arquivo será o título do capítulo e o texto será incluído no texto compilado.
+H1 Capítulo {-}
+Para capítulos não-numerados, como a Introdução ou a Bibliografia.
+H2 Cabeçalho
+O nome do arquivo será o título da seção, mas o conteúdo do texto será ignorado.
+H2 Seção
+O nome do arquivo será o título da seção e conteúdo será incluído no texto compilado.
+H3 Cabeçalho
+O nome do arquivo será o título da subseção, mas o conteúdo do texto será ignorado.
+H3 Subseção
+O nome do arquivo será o título da subseção e conteúdo será incluído no texto compilado.
+H4 Cabeçalho
+O nome do arquivo será o título do parágrafo (sub-subseção), mas o conteúdo do texto será ignorado.
+H4 Parágrafo
+O nome do arquivo será o título do parágrafo (sub-subseção) e conteúdo será incluído no texto compilado.
+Corpo do texto
+O conteúdo entra no texto compilado, mas o nome do arquivo é ignorado.
+Anotações de pesquisa
+O nome do arquivo e o conteúdo são ignorados.</Text>
+            <Comments>O texto contido no campo Notes pode ser apagado.</Comments>
+        </Document>
+        <Document ID="53173413-9BFF-45B9-9E79-90296C92C791">
+            <Title>Resumo</Title>
+            <Synopsis>resumo</Synopsis>
+            <Text>Texto do resumo</Text>
+            <Notes>NÃO MODIFICAR O TEXTO DA SINOPSE!</Notes>
+        </Document>
+        <Document ID="419BED0E-53D1-486F-83F5-1AA3ADE676BE">
+            <Title>Capítulo 1</Title>
+            <Text>Introdução ao capítulo 1</Text>
+        </Document>
+        <Document ID="3FECEF9B-D717-40CA-9C14-69A258C727AE">
+            <Title>Abreviações</Title>
+            <Synopsis>abreviacoes</Synopsis>
+            <Text>Aristóteles
+APo - Analytica Posteriora
+APr - Analytica Priora
+Aud - de Audibilibus
+Cael - de Caelo
+Cat - Categoriae
+Col - de Coloribus
+DA - de Anima
+DivSomn - de Divinatione per Somnia
+EE - Ethica Eudemia
+EN - Ethica Nicomachea
+GA - de Generatione Animalium
+GC - de Generatione et Corruptione
+HA - Historia Animalium
+IA - de Incessu Animalium
+Insomn - de Insomniis
+Int - de Interpretatone
+Juv - de Juventute
+LI - de Lineis Insecabilibus
+Long - De Longitudine et Brevitate Vitae
+MA - de Motu Animalium
+MM - Magna Moralia
+Mech - Mechanica
+Mem - de Memoria
+Metaph - Metaphysica
+Mete - Meteorologica
+Mir - Mirabilia
+Mu - de Mundo
+Oec - Oeconomica
+PA - de Partibus Animalium
+Phys - Physica
+Phgn - Physiognomonica
+Poet - Poetica
+Pol - Politica
+Pr - Problemata
+Resp - de Respiratione
+Rhet - Rhetorica
+RhAl - Rhetorica ad Alexandrum
+SE - De Sophisticis Elenchis
+Sensu - de Sensu et Sensibilibus
+SomnVig - de Somno et Vigilia
+Spir - de Spiritu
+Top - Topica
+VV - de Virtutibus et Vitiis
+Vent - de Ventis
+Xen - de Xenophane
+
+Platão 
+Apol - Apologia
+Charm - Cármides
+Crat - Crátilo
+Crit - Críton
+Euth - Eutidemo
+Euth - Eutífron
+Gorg - Górgias
+Lach - Laques
+Lg - Leis
+Lys - Lísis
+Men - Mênon
+Parm - Parmênides
+Phae - Fedro
+Phae - Fédon
+Philb - Filebo
+Prot - Protágoras
+Rep - República
+Soph - Sofista
+State - Político
+Symp - Simpósio
+Thea - Teeteto
+Tim - Timeu</Text>
+            <Notes>NÃO MODIFICAR O TEXTO DA SINOPSE!
+
+Alcibíades I
+Alcibíades II
+Amantes Rivais
+Clitofon
+Crítias
+Epínomis
+Epístolas
+Hiparco
+Hípias maior
+Hípias menor
+Íon
+Menexêno
+Minos
+Teages
+</Notes>
+        </Document>
+        <Document ID="CF3AB501-D79C-48D7-8A47-0A5FD8796C07">
+            <Title>Abstract</Title>
+            <Synopsis>abstract</Synopsis>
+            <Text>The content of the abstract</Text>
+            <Notes>NÃO MODIFICAR O TEXTO DA SINOPSE!</Notes>
+        </Document>
+        <Document ID="4C1C3E52-EEB3-448A-AB4A-4561DD84C333">
+            <Title>Elementos pós-textuais</Title>
+        </Document>
+        <Document ID="304A0F6D-09C9-4231-81C7-C671008059E7">
+            <Title>Epígrafe</Title>
+            <Synopsis>epigrafe</Synopsis>
+            <Text>She should have died hereafter;    
+There would have been a time for such a word.    
+To-morrow, and to-morrow, and to-morrow,    
+Creeps in this petty pace from day to day,    
+To the last syllable of recorded time;    
+And all our yesterdays have lighted fools    
+The way to dusty death.    
+Out, out, brief candle!    
+Life is but a walking shadow, a poor player    
+That struts and frets his hour upon the stage    
+And then is heard no more. It is a tale    
+Told by an idiot, full of sound and fury    
+Signifying nothing.    
+
+— Macbeth (Act 5, Scene 5, lines 17–28)</Text>
+            <Notes>NÃO MODIFICAR O TEXTO DA SINOPSE!</Notes>
+        </Document>
+        <Document ID="E9D9D8AC-A90D-4919-8D17-092C3409BFCF">
+            <Title>Instruções</Title>
+            <Text>
+</Text>
+        </Document>
+        <Document ID="20D249FC-90B7-4D05-A063-E806156E7CEA">
+            <Title>Markdown</Title>
+            <Text>Apesar de estar escrevendo no Scrivener utilizando texto enriquecido, para todos os fins, é como se estivéssemos escrevendo em Markdown utilizando texto plano, pois no processo de conversão esse é o caminho que o documento irá percorrer (Scrivener → versão em Markdown → versão em LaTeX → PDF). 
+Se você não está familiarizado em absoluto com markdown, não se preocupe. Não é preciso saber usar markdown para utilizar esse template. Isso quer dizer apenas que podemos escolher dois caminhos: (i.) utilizar os estilos que estão disponíveis e deixar o Scrivener fazer por nós a conversão para Markdown (utilizando as regras que configurei no compilador) ou (ii.) escrever diretamente em Markdown. Independentemente da opções que adotarmos, é interessante observar que mais de dois espaços em branco e ou duas quebras de linha em sequência são sempre ignorados. O resultado será rigorosamente o mesmo se você quiser separar dois parágrafos deste modo:
+
+Parágrafo 1
+Parágrafo 2
+
+Ou deste modo:
+
+Parágrafo 1
+
+
+
+Parágrafo 2
+</Text>
+        </Document>
+        <Document ID="AB8EDE51-7997-4BF4-84BD-7C0CC28BE06D">
+            <Title>Sample (Minion Pro)</Title>
+            <Text>Faculdade de Filosofia e Ciências Humanas da Universidade Federal de Minas Gerais
+João Sebastião Ribeiro
+A insustentável leveza dos entes matemáticos
+Belo Horizonte - MG 2021
+
+João Sebastião Ribeiro
+A insustentável leveza dos entes matemáticos
+Tese apresentada ao programa de Pós-Graduação em Filoso- fia da Faculdade de Filosofia e Ciências Humanas da Univer- sidade Federal de Minas Gerais, como requisito parcial para a obtenção do título de Doutor em Filosofia.
+Orientador: Prof. Dr. Antonio Salieri Linha de Pesquisa: Filosofia Antiga e Medieval
+Belo Horizonte - MG 2021
+
+Dedico a tese ao verme que primeiro roer a fria carne de meu cadáver.
+
+Agradecimentos
+Ao Brasil, por eleger Bolsonaro e mostrar que o ruim sempre pode ficar pior.
+
+She should have died hereafter; There would have been a time for such a word. To-morrow, and to-morrow, and to-morrow, Creeps in this petty pace from day to day, To the last syllable of recorded time; And all our yesterdays have lighted fools The way to dusty death. Out, out, brief candle! Life is but a walking shadow, a poor player That struts and frets his hour upon the stage And then is heard no more. It is a tale Told by an idiot, full of sound and fury Signifying nothing.
+— Macbeth (Act 5, Scene 5, lines 17–28)
+
+Advertência
+Este trabalho foi realizado com atenção às diretrizes da Associação Brasi- leira de Normas Técnicas (ABNT). No entanto, no que toca à citação e referên- cia de autores antigos, seguimos as normas consagradas no meio dos Estudos Clássicos; isto é, citar os autores a partir da numeração presente na edição de referência do texto grego, e não a partir das traduções e edições recentes.
+
+Texto do resumo
+The content of the abstract
+Resumo
+Abstract
+
+Aristóteles
+APo - Analytica Posteriora APr - Analytica Priora Aud - de Audibilibus
+Cael - de Caelo
+Cat - Categoriae
+Col - de Coloribus
+DA - de Anima
+DivSomn - de Divinatione per Somnia
+EE - Ethica Eudemia
+EN - Ethica Nicomachea
+GA - de Generatione Animalium GC - de Generatione et Corruptione HA - Historia Animalium
+IA - de Incessu Animalium
+Insomn - de Insomniis
+Int - de Interpretatone
+Juv - de Juventute
+LI - de Lineis Insecabilibus
+Long - De Longitudine et Brevitate Vitae
+MA - de Motu Animalium
+MM - Magna Moralia
+Mech - Mechanica
+Mem - de Memoria
+Metaph - Metaphysica
+Mete - Meteorologica
+Mir - Mirabilia
+Mu - de Mundo
+Oec - Oeconomica
+PA - de Partibus Animalium Phys - Physica
+Phgn - Physiognomonica
+Poet - Poetica
+Pol - Politica
+Pr - Problemata
+Resp - de Respiratione
+Rhet - Rhetorica
+RhAl - Rhetorica ad Alexandrum SE - De Sophisticis Elenchis Sensu - de Sensu et Sensibilibus SomnVig - de Somno et Vigilia Spir - de Spiritu
+Top - Topica
+VV - de Virtutibus et Vitiis
+Vent - de Ventis
+Xen - de Xenophane
+Platão
+Apol - Apologia Charm - Cármides Crat - Crátilo
+Crit - Críton
+Euth - Eutidemo Euth - Eutífron Gorg - Górgias Lach - Laques Lg - Leis
+Lista de Abreviações
+
+Lys - Lísis
+Men - Mênon Parm - Parmênides Phae - Fedro
+Phae - Fédon
+Philb - Filebo
+Prot - Protágoras
+Rep - República Soph - Sofista State - Político Symp - Simpósio Thea - Teeteto Tim - Timeu
+ix
+
+Sumário
+1 Capítulo 1
+1.1 Seção1............. 1.2 Seção2.............
+2 Capítulo 2
+2.1 Seção1............. 2.2 Seção2.............
+1 ................... 1 ................... 1
+3 ................... 3 ................... 3
+5
+Bibliografia
+x
+
+1 Capítulo1
+Introdução ao capítulo 1
+1.1 Seção1
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem- por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con- sequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proi- dent, sunt in culpa qui officia deserunt mollit anim id est laborum (ROSS 1924, p. 134).
+1.2 Seção2
+Lorem ipsum dolor sit amet (ROSSI 2013, p. 10), consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+1
+
+Capítulo 1
+ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volup- tate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+2
+
+2 Capítulo2
+Introdução ao capítulo 2
+2.1 Seção1
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem- por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con- sequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proi- dent, sunt in culpa qui officia deserunt mollit anim id est laborum (CARR; STEUTEL 1999, p. 90).
+2.2 Seção2
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem- por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con-
+3
+
+Capítulo 2
+sequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proi- dent, sunt in culpa qui officia deserunt mollit anim id est laborum (HAAS; MANSFELD 2004, p. 4).
+4
+
+Bibliografia
+ARISTÓTELES. Metaphysics. Ed.: W. D. Ross. v. 1 Oxford: Clarendon Press, 1924.
+CARR, D.; STEUTEL, J. (Eds.). Virtue ethics and moral education. London: Routledge, 1999.
+HAAS, F. DE; MANSFELD, J. (Eds.). Aristotle’ on generation and corruption book i. Oxford: OUP, 2004.
+ROSSI, G. Chance and accidental causes in aristotle: Metaph. E 3 in the light of the concept of tyche. [s.l: s.n.].
+5
+
+Compilado usando ABNTex-o-matic para
+LATEX
+Em 2021-02-17.
+</Text>
+        </Document>
+        <Document ID="C771CF2F-B806-458B-912C-6CD85E825444">
+            <Title>Capítulo 2</Title>
+            <Text>Introdução ao capítulo 2</Text>
+        </Document>
+        <Document ID="8A879178-A95B-4D09-B2FA-28E2CBC55F8D">
+            <Title>Bibliografia</Title>
+            <Text>ABNTeX-o-matic está configurado para utilizar o CSL ABNT-FA. Você pode utilizar outros estilos bibliográficos, basta corrigir o arquivo sendo referenciado no cabeçalho YAML.</Text>
+        </Document>
+        <Document ID="002229F5-3B1E-452C-8D0A-835C50A2964F">
+            <Title>Seção 2</Title>
+            <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (@deHaas2004, p. 4).</Text>
+        </Document>
+        <Document ID="73268A6B-10D2-4577-A7E9-A8915F9C8470">
+            <Title>Bibliografia</Title>
+            <Text>
+
+::: {#refs}
+:::</Text>
+        </Document>
+        <Document ID="F46AC63D-8977-4A04-9794-EB5886D89E30">
+            <Title>Advertência</Title>
+            <Synopsis>advertencia</Synopsis>
+            <Text>Este trabalho foi realizado com atenção às diretrizes da Associação Brasileira de Normas Técnicas (ABNT). No entanto, no que toca à citação e referência de autores antigos, seguimos as normas consagradas no meio dos Estudos Clássicos; isto é, citar os autores a partir da numeração presente na edição de referência do texto grego, e não a partir das traduções e edições recentes. </Text>
+            <Notes>NÃO MODIFICAR O TEXTO DA SINOPSE!</Notes>
+        </Document>
+        <Document ID="810A571B-D7A4-419E-A9FF-01E331428138">
+            <Title>Recursos</Title>
+        </Document>
+        <Document ID="6FF3DDB3-9280-483E-A1BC-225488A4E647">
+            <Title>Dedicatória</Title>
+            <Synopsis>dedicatoria</Synopsis>
+            <Text>Dedico a tese ao verme que primeiro roer a fria carne de meu cadáver.</Text>
+            <Notes>NÃO MODIFICAR O TEXTO DA SINOPSE!</Notes>
+        </Document>
+        <Document ID="8F976462-5BB3-499D-A6C0-5729F2606D82">
+            <Title>Seção 1</Title>
+            <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (@Carr2005, p. 90).</Text>
+        </Document>
+        <Document ID="213E067E-4099-4814-86ED-FB57E73B8CFC">
+            <Title>Elementos pré-textuais</Title>
+        </Document>
+        <Document ID="D1F778EC-B8EE-4CFF-956E-930BCCF78472">
+            <Title>Pandoc</Title>
+            <Text>Para gerar o PDF da Dissertação/Tese utilizaremos um programa chamado Pandoc (as instruções para fazer a instalação podem ser encontradas aqui). Como utilizaremos opção de converter o nosso arquivo via LaTeX, precisamos também ter instalado o MiKTeX (Windows) ou o MacTeX (macOS) — em ambos os casos a instalação mínima será suficiente, se você quiser economizar espaço em disco. </Text>
+        </Document>
+        <Document ID="A6B9DBD9-3593-423D-9047-AA1EB3631D21">
+            <Title>Sample</Title>
+            <Text>---
+# Importante: arquivos YAML usam espaços em branco para representar a estrutura, então não use tabulações (tab) e lembre-se de deixar as aspas retas ("") e manter os nomes de todos os campos de metadados em caixa baixa.
+titulo: 'A insustentável leveza dos entes matemáticos'
+subtitulo:
+autor: 'João Sebastião Ribeiro'
+orientador: 'Prof. Dr. Antonio Salieri'
+faculdade: 'Faculdade de Filosofia e Ciências Humanas da Universidade Federal de Minas Gerais'
+lugar: 'Belo Horizonte - MG'
+ano: '2021'
+grau: 'Doutor'
+curso: 'Filosofia'
+tipodetrabalho: 'Tese'
+linhadepesquisa: 'Filosofia Antiga e Medieval'
+mainfont: 'Alegreya'
+citecolor: 'RoyalBlue'
+linkcolor: 'RoyalBlue'
+sansfont: 'Alegreya Sans'
+monofont: 'Menlo'
+urlcolor: 'RoyalBlue'
+compiled: 17/02/21    
+book: true    
+top-level-division: chapter    
+pandocomatic_:    
+  use-template:    
+    - docx-refs-crossref    
+    - abntex-o-matic
+    - abntex-refs-crossref    
+#    - abntex-o-matic-pdf    
+#    - docx    
+#    - plain    
+#    - plain-refs    
+#    - plain-refs-crossref    
+#    - docx    
+#    - docx-refs    
+#    - docx-refs-nsfc    
+#    - docx-refs-crossref    
+#    - docx-refs-not-linked    
+#    - docx-endnote    
+#    - docx-changes    
+#    - abntex-o-matic    
+#    - abntex-o-matic-refs    
+#    - abntex-o-matic-refs-crossref    
+#    - abntex-o-matic-with-toc    
+#    - abntex-o-matic-with-lof    
+#    - abntex-o-matic-pdf-refs    
+#    - abntex-o-matic-pdf-refs-crossref    
+#    - odt-refs    
+#    - latex    
+#    - latex-refs    
+#    - latex-refs-crossref    
+#    - latex-endnote    
+#    - latex-chemfig     
+#    - pdf-endnote    
+#    - latex-ieee    
+#    - memoir-with-refs    
+#    - html    
+#    - html-selfcontained    
+#    - html-changes    
+#    - html-refs    
+#    - html-refs-crossref    
+#    - html-endnote    
+#    - html-scholar    
+#    - html-scholar-pdf    
+#    - html-pdf    
+#    - html-refs-pdf    
+#    - html-endnote-pdf    
+#    - tufte-refs    
+#    - tufte-refs-pdf    
+#    - epub-test     
+---
+
+
+  
+---
+dedicatoria: |
+  Dedico a tese ao verme que primeiro roer a fria carne de meu cadáver.  
+---
+  
+---
+agradecimentos: |
+  Ao Brasil, por eleger Bolsonaro e mostrar que o ruim sempre pode ficar pior.  
+---
+  
+---
+epigrafe: |
+  She should have died hereafter;      
+  There would have been a time for such a word.      
+  To-morrow, and to-morrow, and to-morrow,      
+  Creeps in this petty pace from day to day,      
+  To the last syllable of recorded time;      
+  And all our yesterdays have lighted fools      
+  The way to dusty death.      
+  Out, out, brief candle!      
+  Life is but a walking shadow, a poor player      
+  That struts and frets his hour upon the stage      
+  And then is heard no more. It is a tale      
+  Told by an idiot, full of sound and fury      
+  Signifying nothing.      
+
+  --- Macbeth (Act 5, Scene 5, lines 17–28)  
+---
+  
+---
+advertencia: |
+  Este trabalho foi realizado com atenção às diretrizes da *Associação Brasileira de Normas Técnicas* (ABNT). No entanto, no que toca à citação e referência de autores antigos, seguimos as normas consagradas no meio dos Estudos Clássicos; isto é, citar os autores a partir da numeração presente na edição de referência do texto grego, e não a partir das traduções e edições recentes.   
+---
+  
+---
+resumo: |
+  Texto do resumo  
+---
+  
+---
+abstract: |
+  The content of the abstract  
+---
+  
+---
+abreviacoes: |
+  **Aristóteles**  
+  APo - *Analytica Posteriora*  
+  APr - *Analytica Priora*  
+  Aud - *de Audibilibus*  
+  Cael - *de Caelo*  
+  Cat - *Categoriae*  
+  Col - *de Coloribus*  
+  DA - *de Anima*  
+  DivSomn - *de Divinatione per Somnia*  
+  EE - *Ethica Eudemia*  
+  EN - *Ethica Nicomachea*  
+  GA - *de Generatione Animalium*  
+  GC - *de Generatione et Corruptione*  
+  HA - *Historia Animalium*  
+  IA - *de Incessu Animalium*  
+  Insomn - *de Insomniis*  
+  Int - *de Interpretatone*  
+  Juv - *de Juventute*  
+  LI - *de Lineis Insecabilibus*  
+  Long - *De Longitudine et Brevitate Vitae*  
+  MA - *de Motu Animalium*  
+  MM - *Magna Moralia*  
+  Mech - *Mechanica*  
+  Mem - *de Memoria*  
+  Metaph - *Metaphysica*  
+  Mete - *Meteorologica*  
+  Mir - *Mirabilia*  
+  Mu - *de Mundo*  
+  Oec - *Oeconomica*  
+  PA - *de Partibus Animalium*  
+  Phys - *Physica*  
+  Phgn - *Physiognomonica*  
+  Poet - *Poetica*  
+  Pol - *Politica*  
+  Pr - *Problemata*  
+  Resp - *de Respiratione*  
+  Rhet - *Rhetorica*  
+  RhAl - *Rhetorica ad Alexandrum*  
+  SE - *De Sophisticis Elenchis*  
+  Sensu - *de Sensu et Sensibilibus*  
+  SomnVig - *de Somno et Vigilia*  
+  Spir - *de Spiritu*  
+  Top - *Topica*  
+  VV - *de Virtutibus et Vitiis*  
+  Vent - *de Ventis*  
+  Xen - *de Xenophane*  
+
+  **Platão **  
+  Apol - *Apologia*  
+  Charm - *Cármides*  
+  Crat - *Crátilo*  
+  Crit - *Críton*  
+  Euth - *Eutidemo*  
+  Euth - *Eutífron*  
+  Gorg - *Górgias*  
+  Lach - *Laques*  
+  Lg - *Leis*  
+  Lys - *Lísis*  
+  Men - *Mênon*  
+  Parm - *Parmênides*  
+  Phae - *Fedro*  
+  Phae - *Fédon*  
+  Philb - *Filebo*  
+  Prot - *Protágoras*  
+  Rep - *República*  
+  Soph - *Sofista*  
+  State - *Político*  
+  Symp - *Simpósio*  
+  Thea - *Teeteto*  
+  Tim - *Timeu*  
+---
+
+
+# Capítulo 1
+
+Introdução ao capítulo 1
+
+## Seção 1
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (@Metaph_Ross_a, p. 134).
+
+## Seção 2
+
+Lorem ipsum dolor sit amet (@Rossi2013, p. 10), consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+# Capítulo 2
+
+Introdução ao capítulo 2
+
+## Seção 1
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (@Carr2005, p. 90).
+
+## Seção 2
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (@deHaas2004, p. 4).
+
+# Bibliografia {-}
+
+
+
+::: {#refs}
+:::</Text>
+        </Document>
+    </Documents>
+</SearchIndexes>

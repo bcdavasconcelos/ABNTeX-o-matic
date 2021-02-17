@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompileFormat Name="New Format" ID="4EC8C927-C93A-4590-852E-E8ED327F5DD4">
+    <SectionLayouts>
+        <Layout Name="Chapter Number" ID="CHAPTER-NUMBER">
+            <RTFBookmark>Yes</RTFBookmark>
+            <BlankLineSeparator SkipStyles="Yes"></BlankLineSeparator>
+            <Titles>
+                <Prefix><![CDATA[<$n>]]></Prefix>
+            </Titles>
+            <Formatting Override="No" EbooksUseBaseFormatting="No">
+                <Title><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs96 Attributes
+\fs24 <!$Scr_H::1>}]]></Title>
+                <TitlePrefix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs96 Attributes
+\fs24 <!$Scr_H::1>}]]></TitlePrefix>
+                <TitleSuffix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs96 Attributes
+\fs24 <!$Scr_H::1>}]]></TitleSuffix>
+                <MetaData><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></MetaData>
+                <Synopsis><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Synopsis>
+                <Notes><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Notes>
+                <Text><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Text>
+                <Subtitles><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf0 Attributes}]]></Subtitles>
+                <PreserveUncommonAlignment>Yes</PreserveUncommonAlignment>
+                <PreserveTabsAndIndents>No</PreserveTabsAndIndents>
+            </Formatting>
+            <Separators>
+                <Before Type="PageBreak"/>
+                <Between Type="PageBreak"/>
+                <AfterOverride Use="No" Type="Single"/>
+            </Separators>
+        </Layout>
+        <Layout Name="Chapter Number and Text" ID="CHAPTER-NUMBER-AND-TEXT">
+            <Include Text="Yes"/>
+            <RTFBookmark>Yes</RTFBookmark>
+            <BlankLineSeparator SkipStyles="Yes"></BlankLineSeparator>
+            <Titles>
+                <Prefix><![CDATA[<$n>]]></Prefix>
+            </Titles>
+            <Formatting Override="No" EbooksUseBaseFormatting="No">
+                <Title><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs96 Attributes
+\fs24 <!$Scr_H::1>}]]></Title>
+                <TitlePrefix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs96 Attributes
+\fs24 <!$Scr_H::1>}]]></TitlePrefix>
+                <TitleSuffix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs96 Attributes
+\fs24 <!$Scr_H::1>}]]></TitleSuffix>
+                <MetaData><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></MetaData>
+                <Synopsis><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Synopsis>
+                <Notes><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Notes>
+                <Text><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Text>
+                <Subtitles><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf0 Attributes}]]></Subtitles>
+                <PreserveUncommonAlignment>Yes</PreserveUncommonAlignment>
+                <PreserveTabsAndIndents>No</PreserveTabsAndIndents>
+            </Formatting>
+            <Separators>
+                <Before Type="PageBreak"/>
+                <Between Type="PageBreak"/>
+                <AfterOverride Use="No" Type="Single"/>
+            </Separators>
+        </Layout>
+        <Layout Name="New Page Heading" ID="NEW-PAGE-HEADER">
+            <Include Titles="Yes"/>
+            <RTFBookmark>Yes</RTFBookmark>
+            <BlankLineSeparator SkipStyles="Yes"></BlankLineSeparator>
+            <Formatting Override="No" EbooksUseBaseFormatting="No">
+                <Title><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs56 Attributes
+\fs24 <!$Scr_H::1>}]]></Title>
+                <TitlePrefix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs56 Attributes
+\fs24 <!$Scr_H::1>}]]></TitlePrefix>
+                <TitleSuffix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs56 Attributes
+\fs24 <!$Scr_H::1>}]]></TitleSuffix>
+                <MetaData><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></MetaData>
+                <Synopsis><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Synopsis>
+                <Notes><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Notes>
+                <Text><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Text>
+                <Subtitles><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf0 Attributes}]]></Subtitles>
+                <PreserveUncommonAlignment>Yes</PreserveUncommonAlignment>
+                <PreserveTabsAndIndents>No</PreserveTabsAndIndents>
+            </Formatting>
+            <Separators>
+                <Before Type="PageBreak"/>
+                <Between Type="PageBreak"/>
+                <AfterOverride Use="No" Type="Single"/>
+            </Separators>
+        </Layout>
+        <Layout Name="New Page Heading and Text" ID="NEW-PAGE-HEADER-WITH-TEXT">
+            <Include Titles="Yes" Text="Yes"/>
+            <RTFBookmark>Yes</RTFBookmark>
+            <BlankLineSeparator SkipStyles="Yes"></BlankLineSeparator>
+            <Formatting Override="No" EbooksUseBaseFormatting="No">
+                <Title><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs56 Attributes
+\fs24 <!$Scr_H::1>}]]></Title>
+                <TitlePrefix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs56 Attributes
+\fs24 <!$Scr_H::1>}]]></TitlePrefix>
+                <TitleSuffix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb720\sa720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 <$Scr_H::1>
+\fs56 Attributes
+\fs24 <!$Scr_H::1>}]]></TitleSuffix>
+                <MetaData><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></MetaData>
+                <Synopsis><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Synopsis>
+                <Notes><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Notes>
+                <Text><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Text>
+                <Subtitles><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf0 Attributes}]]></Subtitles>
+                <PreserveUncommonAlignment>Yes</PreserveUncommonAlignment>
+                <PreserveTabsAndIndents>No</PreserveTabsAndIndents>
+            </Formatting>
+            <Separators>
+                <Before Type="PageBreak"/>
+                <Between Type="PageBreak"/>
+                <AfterOverride Use="No" Type="Single"/>
+            </Separators>
+        </Layout>
+        <Layout Name="Heading" ID="HEADER">
+            <Include Titles="Yes"/>
+            <RTFBookmark>Yes</RTFBookmark>
+            <BlankLineSeparator SkipStyles="Yes"></BlankLineSeparator>
+            <Formatting Override="No" EbooksUseBaseFormatting="No">
+                <Title><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb480\sa240\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <$ScrKeepWithNext><$Scr_H::2>
+\f1\b\fs40 Attributes
+\f0\b0\fs24 <!$Scr_H::2>}]]></Title>
+                <TitlePrefix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb480\sa240\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <$ScrKeepWithNext><$Scr_H::2>
+\f1\b\fs40 Attributes
+\f0\b0\fs24 <!$Scr_H::2>}]]></TitlePrefix>
+                <TitleSuffix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb480\sa240\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <$ScrKeepWithNext><$Scr_H::2>
+\f1\b\fs40 Attributes
+\f0\b0\fs24 <!$Scr_H::2>}]]></TitleSuffix>
+                <MetaData><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></MetaData>
+                <Synopsis><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Synopsis>
+                <Notes><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Notes>
+                <Text><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Text>
+                <Subtitles><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf0 Attributes}]]></Subtitles>
+                <PreserveUncommonAlignment>Yes</PreserveUncommonAlignment>
+                <PreserveTabsAndIndents>No</PreserveTabsAndIndents>
+            </Formatting>
+            <Separators>
+                <Before Type="Single"/>
+                <Between Type="Single"/>
+                <AfterOverride Use="No" Type="Single"/>
+            </Separators>
+        </Layout>
+        <Layout Name="Text Section with Heading" ID="TEXT-WITH-HEADER">
+            <Include Titles="Yes" Text="Yes"/>
+            <RTFBookmark>Yes</RTFBookmark>
+            <BlankLineSeparator SkipStyles="Yes"></BlankLineSeparator>
+            <Formatting Override="No" EbooksUseBaseFormatting="No">
+                <Title><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb480\sa240\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <$ScrKeepWithNext><$Scr_H::2>
+\f1\b\fs40 Attributes
+\f0\b0\fs24 <!$Scr_H::2>}]]></Title>
+                <TitlePrefix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb480\sa240\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <$ScrKeepWithNext><$Scr_H::2>
+\f1\b\fs40 Attributes
+\f0\b0\fs24 <!$Scr_H::2>}]]></TitlePrefix>
+                <TitleSuffix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sb480\sa240\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <$ScrKeepWithNext><$Scr_H::2>
+\f1\b\fs40 Attributes
+\f0\b0\fs24 <!$Scr_H::2>}]]></TitleSuffix>
+                <MetaData><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></MetaData>
+                <Synopsis><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Synopsis>
+                <Notes><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Notes>
+                <Text><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Text>
+                <Subtitles><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf0 Attributes}]]></Subtitles>
+                <PreserveUncommonAlignment>Yes</PreserveUncommonAlignment>
+                <PreserveTabsAndIndents>No</PreserveTabsAndIndents>
+            </Formatting>
+            <Separators>
+                <Before Type="Single"/>
+                <Between Type="Single"/>
+                <AfterOverride Use="No" Type="Single"/>
+            </Separators>
+        </Layout>
+        <Layout Name="Text Section" ID="TEXT-SECTION">
+            <Include Text="Yes"/>
+            <RTFBookmark>Yes</RTFBookmark>
+            <BlankLineSeparator SkipStyles="Yes"></BlankLineSeparator>
+            <Formatting Override="No" EbooksUseBaseFormatting="No">
+                <Title><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Title>
+                <TitlePrefix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></TitlePrefix>
+                <TitleSuffix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></TitleSuffix>
+                <MetaData><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></MetaData>
+                <Synopsis><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Synopsis>
+                <Notes><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Notes>
+                <Text><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Text>
+                <Subtitles><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf0 Attributes}]]></Subtitles>
+                <PreserveUncommonAlignment>Yes</PreserveUncommonAlignment>
+                <PreserveTabsAndIndents>No</PreserveTabsAndIndents>
+            </Formatting>
+            <Separators>
+                <Before Type="Single"/>
+                <Between Type="Double"/>
+                <AfterOverride Use="No" Type="Single"/>
+            </Separators>
+        </Layout>
+        <Layout Name="New Page" ID="NEW-PAGE">
+            <Include Text="Yes"/>
+            <RTFBookmark>Yes</RTFBookmark>
+            <BlankLineSeparator SkipStyles="Yes"></BlankLineSeparator>
+            <Formatting Override="No" EbooksUseBaseFormatting="No">
+                <Title><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Title>
+                <TitlePrefix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></TitlePrefix>
+                <TitleSuffix><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></TitleSuffix>
+                <MetaData><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></MetaData>
+                <Synopsis><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Synopsis>
+                <Notes><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Notes>
+                <Text><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></Text>
+                <Subtitles><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf0 Attributes}]]></Subtitles>
+                <PreserveUncommonAlignment>Yes</PreserveUncommonAlignment>
+                <PreserveTabsAndIndents>No</PreserveTabsAndIndents>
+            </Formatting>
+            <Separators>
+                <Before Type="PageBreak"/>
+                <Between Type="PageBreak"/>
+                <AfterOverride Use="No" Type="Single"/>
+            </Separators>
+        </Layout>
+    </SectionLayouts>
+    <FormattingOptions>
+        <NotesBeforeText>Yes</NotesBeforeText>
+        <IncludeSubtitles>Yes</IncludeSubtitles>
+    </FormattingOptions>
+    <SeparatorSettings>
+        <FolderSeparators>
+            <Before Type="Double"/>
+            <Between Type="Double"/>
+            <AfterOverride Use="No" Type="Single"/>
+        </FolderSeparators>
+        <TextSeparators>
+            <Before Type="Double"/>
+            <Between Type="Double"/>
+            <AfterOverride Use="No" Type="Single"/>
+        </TextSeparators>
+        <Font Size="12.0" Override="No">Gentium</Font>
+    </SeparatorSettings>
+    <Styles>
+        <Style Name="Block Quote" ID="08976184-531E-41D3-96A9-D1B22137FB9C" Type="Para" FontChange="Face+Size">
+            <Format><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 GentiumPlus;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\deftab720
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9360\tx10080\tx10800\tx11520\pardeftab720\li2267\sl264\slmult1\pardirnatural\qj\partightenfactor0
+
+\f0\fs22 \cf0 Attributes}]]></Format>
+            <Prefix><![CDATA[> ]]></Prefix>
+        </Style>
+        <Style Name="InfoBox" ID="81F480D6-AFA5-485A-AC67-C49421CCA113" Type="Para+Char" FontChange="Face+Size">
+            <Format><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 GentiumPlus;}
+{\colortbl;\red255\green255\blue255;\red254\green192\blue62;}
+{\*\expandedcolortbl;;\csgenericrgb\c99486\c75177\c24498;}
+\deftab720
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\tx9360\tx10080\tx10800\tx11520\pardeftab720\sl336\slmult1\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 \cb2 Attributes}]]></Format>
+            <Prefix><![CDATA[{==]]></Prefix>
+            <Suffix><![CDATA[==}]]></Suffix>
+        </Style>
+        <Style Name="Cite" ID="B80B34F9-E7E7-4805-A1DD-1525ABFF3D36" Type="Char" FontChange="Face">
+            <Format><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Gentium;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf2 \expnd0\expndtw0\kerning0
+Attributes}]]></Format>
+            <RawMarkup>Yes</RawMarkup>
+            <Prefix><![CDATA[@]]></Prefix>
+        </Style>
+        <Style Name="Cite (hide author)" ID="DCA23116-C0D7-4A96-ABED-5FAC9AE2E67A" Type="Char">
+            <Format><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 GentiumPlus;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf0 Attributes}]]></Format>
+            <Prefix><![CDATA[-@]]></Prefix>
+        </Style>
+        <Style Name="Emphasis" ID="BB97FC3B-B5F9-4004-AA72-3C09FAF81003" Type="Char">
+            <Format><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Oblique;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs28 \cf0 Attributes}]]></Format>
+            <Prefix><![CDATA[*]]></Prefix>
+            <Suffix><![CDATA[*]]></Suffix>
+        </Style>
+        <Style Name="Strong" ID="238EC690-B93E-4BBA-83D2-F91243992138" Type="Char">
+            <Format><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Attributes}]]></Format>
+            <Prefix><![CDATA[**]]></Prefix>
+            <Suffix><![CDATA[**]]></Suffix>
+        </Style>
+    </Styles>
+    <TitleLinks>
+        <UpdateLinksWithPrefixAndSuffix>Yes</UpdateLinksWithPrefixAndSuffix>
+        <PrefixSeparator NewlinesOnly="Yes"><![CDATA[ - ]]></PrefixSeparator>
+    </TitleLinks>
+    <Layout>
+        <BlankLineSeparator><![CDATA[* * *]]></BlankLineSeparator>
+        <Scriptwriting>
+            <PFAsDualDialogue>No</PFAsDualDialogue>
+            <MoreAndContd Enabled="No">
+                <MoreText><![CDATA[(MORE)]]></MoreText>
+                <ContdText><![CDATA[(CONT'D)]]></ContdText>
+            </MoreAndContd>
+            <Elements>
+                <Character>Character</Character>
+                <Dialogue>Dialogue</Dialogue>
+                <Parenthetical>Parenthetical</Parenthetical>
+            </Elements>
+        </Scriptwriting>
+    </Layout>
+    <Transformations>
+        <RemoveSmartPunctuation>Yes</RemoveSmartPunctuation>
+        <PlainTextConversion State="Off">Spacing+Indents</PlainTextConversion>
+        <UnderlineHyperlinks>Yes</UnderlineHyperlinks>
+        <OutlineIndent State="Off">18.0</OutlineIndent>
+    </Transformations>
+    <Statistics>
+        <ExcludeFrontMatter>Yes</ExcludeFrontMatter>
+        <ExcludeBackMatter>Yes</ExcludeBackMatter>
+        <CountAllText>Yes</CountAllText>
+        <CountMainText>Yes</CountMainText>
+        <IncludeFootnotes>Yes</IncludeFootnotes>
+    </Statistics>
+    <Tables>
+        <ConvertToImages MaxWidth="600.0">No</ConvertToImages>
+    </Tables>
+    <FootnotesAndComments>
+        <Footnotes>
+            <Font Size="10.0" Override="No">Gentium</Font>
+            <IndentMatchesText>Yes</IndentMatchesText>
+            <FootnotesUseSingleLineSpacing>Yes</FootnotesUseSingleLineSpacing>
+            <DividerStyle>Default</DividerStyle>
+            <FootnoteStyle>Arabic</FootnoteStyle>
+            <EndnoteStyle>Arabic</EndnoteStyle>
+            <Numbering>Continuous</Numbering>
+            <Separator>Yes</Separator>
+            <EndnotesArrangement>
+                <Placement>End</Placement>
+                <SectionGrouping>
+                    <Font Size="12.0">Helvetica</Font>
+                </SectionGrouping>
+            </EndnotesArrangement>
+            <AvoidWidowsAndOrphans>Yes</AvoidWidowsAndOrphans>
+            <CanSplitAcrossPages>Yes</CanSplitAcrossPages>
+            <KeepAtBottomOfPage>Yes</KeepAtBottomOfPage>
+            <InlinePlainText>
+                <FootnotePrefix><![CDATA[[]]></FootnotePrefix>
+                <FootnoteSuffix><![CDATA[]]]></FootnoteSuffix>
+            </InlinePlainText>
+        </Footnotes>
+        <Comments>
+            <AnnotationsRTFType>Comments</AnnotationsRTFType>
+            <AnnotationPrefix><![CDATA[[]]></AnnotationPrefix>
+            <AnnotationSuffix><![CDATA[]]]></AnnotationSuffix>
+            <CommentFormatString Use="No">[&lt;$lnk&gt;]{&lt;$cmt&gt;}</CommentFormatString>
+        </Comments>
+    </FootnotesAndComments>
+    <PageSettings UseProjectSettings="Yes" UseDefaultPaperSize="Yes">
+        <PrintSettings PaperSize="595.0,842.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"/>
+        <Margins Units="Inches" RespectPrinterBounds="Yes">
+            <Top>1.0</Top>
+            <Bottom>1.0</Bottom>
+            <Left>1.0</Left>
+            <Right>1.0</Right>
+        </Margins>
+        <HeadersAndFooters>
+            <HeaderFont Size="12.0">Helvetica</HeaderFont>
+            <FooterFont Size="12.0">Helvetica</FooterFont>
+            <DifferentFirstPages>Yes</DifferentFirstPages>
+            <CountFirstScriptPage>Yes</CountFirstScriptPage>
+            <FirstRegularPage>-1</FirstRegularPage>
+            <StandardHeader/>
+            <StandardFooter>
+                <Center><![CDATA[<$p>]]></Center>
+            </StandardFooter>
+            <FirstPagesHeader/>
+            <FirstPagesFooter/>
+            <RectoHeader/>
+            <RectoFooter>
+                <Center><![CDATA[<$p>]]></Center>
+            </RectoFooter>
+            <NewSectionHeader/>
+            <NewSectionFooter>
+                <Center><![CDATA[<$p>]]></Center>
+            </NewSectionFooter>
+            <BackMatterHeader/>
+            <BackMatterFooter/>
+        </HeadersAndFooters>
+    </PageSettings>
+    <PrintPDF>
+        <ColorHyperlinks>Yes</ColorHyperlinks>
+        <GeneratePDFOutline>Yes</GeneratePDFOutline>
+        <InternalLinkColor>0.042799 0.325744 0.003139</InternalLinkColor>
+    </PrintPDF>
+    <RTF>
+        <IncludeStyles>Yes</IncludeStyles>
+        <Columns Location="FirstPage" Number="2" TwipsBetween="360"/>
+        <FormatHyperlinks>Yes</FormatHyperlinks>
+    </RTF>
+    <ScriptFormats>
+        <BreakDialogueAndActionAtSentences>Yes</BreakDialogueAndActionAtSentences>
+        <IncludeRevisionColors>Yes</IncludeRevisionColors>
+        <SummaryFont Size="12.0">.AppleSystemUIFont</SummaryFont>
+        <ScriptNoteFont Size="12.0">Courier</ScriptNoteFont>
+    </ScriptFormats>
+    <HTML>
+        <UseCenteredBodyTable Width="600">Yes</UseCenteredBodyTable>
+        <FullPageImageWidth>600</FullPageImageWidth>
+    </HTML>
+    <PlainText>
+        <Extension></Extension>
+    </PlainText>
+    <MMD>
+        <MetaData>
+            <Value IsProjectMetaDataPlaceholder="Yes"/>
+        </MetaData>
+        <AddClosingHashesToTitles>Yes</AddClosingHashesToTitles>
+        <LaTeXDocumentClass>Memoir</LaTeXDocumentClass>
+    </MMD>
+    <EBookSettings>
+        <BaseFormat><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Attributes}]]></BaseFormat>
+        <CSSStylesFromDirectFormatting>Yes</CSSStylesFromDirectFormatting>
+        <EndnotesTitle>Notes</EndnotesTitle>
+        <EquationsAsMathML>Yes</EquationsAsMathML>
+        <TablesAndLists>
+            <TableStyle>Basic</TableStyle>
+            <EpubListStyle>Basic</EpubListStyle>
+            <KindleListStyle>Basic</KindleListStyle>
+            <EpubBulletStyle>Basic</EpubBulletStyle>
+            <KindleBulletStyle>Basic</KindleBulletStyle>
+        </TablesAndLists>
+        <ScriptSettings HasScriptFormatting="No"><![CDATA[.scene-heading {text-align:left; text-indent:0; margin: 12pt 0 0 0; text-transform:uppercase; font-family: monospace;}
+.action {text-align:left; text-indent:0; margin: 12pt 0 0 0; font-family: monospace;}
+.character {text-align:center; text-indent:0; margin: 12pt 0 0 0; text-transform:uppercase; font-family: monospace;}
+.parenthetical {text-align:center; text-indent:0; margin: 0 0 0 0; font-family: monospace;}
+.dialogue {text-align:left; text-indent:0; margin: 0 20% 0 20%; font-family: monospace;}
+.transition {text-align:right; text-indent:0; margin: 12pt 0 0 0; text-transform:uppercase; font-family: monospace;}
+.shot {text-align:left; text-indent:0; margin: 12pt 0pt 0pt 0pt; text-transform:uppercase; font-family: monospace;}]]></ScriptSettings>
+        <PandocSettings>
+            <Version>2</Version>
+        </PandocSettings>
+    </EBookSettings>
+    <PostProcessing Enabled="No" Type="Script"/>
+</CompileFormat>
