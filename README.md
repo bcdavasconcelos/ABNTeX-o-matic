@@ -15,7 +15,7 @@ Para sanar essa demanda e gerar o arquivo final do meu próprio trabalho, prepar
 
 A rigor, esse template diverge em detalhes muito pequenos das normas da ABNT. As margens, por exemplo, não são 3,3,2,2cm; ao invés disso, elas são automaticamente calculadas pelo mecanismo de conversão para obter o melhor resultado possível no posicionamento do texto.  
 
-# Texto base
+## Fonte em Markdown
 
 Toda a tese pode ser gerada a partir de um simples arquivo em formato markdown com um cabeçalho YAML.
 
@@ -165,5 +165,18 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 ::: {#refs}
 :::
+
+```
+
+## Comando para a conversão
+
+Adicione o arquivo `abntex-o-matic.latex` à pasta de templates do Pandoc. Se você quiser que o Pandoc cuide da bibliografia, adicione também à pasta os arquivos de estilo ([ABNT-FA.csl](https://github.com/bcdavasconcelos/CSL-ABNT-para-Autores-Antigos/blob/main/Pandoc/ABNT-FA.csl)) e da bibliografia em formato BibTeX ou JSON. Em caso de dúvida, consulte [a documentação do pandoc](https://pandoc.org/MANUAL.html#citations) ou abra um `issue` neste repositório.
+
+**Windows:** `C:\Users\USERNAME\AppData\Roaming\pandoc`
+**Mac:** `$HOME/.local/share/pandoc`
+
+```bash
+
+/usr/local/bin/pandoc -s -f markdown "Sample.md" --metadata link-citations=true --pdf-engine=xelatex -C "--csl=ABNT-FA.csl" "--bibliography=All.json" "--template=abntex-o-matic.latex" --top-level-division=chapter --toc -o "Sample".pdf && open "Sample".pdf
 
 ```
