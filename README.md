@@ -8,6 +8,9 @@ A preparação de um modelo para conversão via LaTeX (usando um mecanismo chama
 
 Para sanar essa demanda e gerar o arquivo final do meu próprio trabalho, preparei um novo modelo utilizando como fonte o [Mimosis](https://github.com/Pseudomanifold/latex-mimosis).  
 
-![](/Samples/2021-02-17_19-44-45.png)
+![](/Samples/2021-02-17_20-00-08.png)
+![](/Samples/2021-02-17_19-56-59.png)
+![](/Samples/2021-02-17_19-57-26.png)
+![](/Samples/2021-02-17_19-57-42.png)
 
 A rigor, esse template diverge em detalhes muito pequenos das normas da ABNT. As margens, por exemplo, não são 3,3,2,2cm; ao invés disso, elas são automaticamente calculadas pelo mecanismo de conversão para obter o melhor resultado possível no posicionamento do texto.  
