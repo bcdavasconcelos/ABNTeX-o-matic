@@ -170,10 +170,12 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 ## Comando para a conversão
 
-Adicione o arquivo `abntex-o-matic.latex` à pasta de templates do Pandoc. Se você quiser que o Pandoc cuide da bibliografia, adicione também à pasta os arquivos de estilo ([ABNT-FA.csl](https://github.com/bcdavasconcelos/CSL-ABNT-para-Autores-Antigos/blob/main/Pandoc/ABNT-FA.csl)) e da bibliografia em formato BibTeX ou JSON. Em caso de dúvida, consulte [a documentação do pandoc](https://pandoc.org/MANUAL.html#citations) ou abra um `issue` neste repositório.
+Adicione o arquivo `abntex-o-matic.latex` à pasta de templates do Pandoc.   
 
-**Windows:** `C:\Users\USERNAME\AppData\Roaming\pandoc`
-**Mac:** `$HOME/.local/share/pandoc`
+**Windows:** `C:\Users\USERNAME\AppData\Roaming\pandoc`  
+**Mac:** `$HOME/.local/share/pandoc`   
+
+Se você quiser que o Pandoc cuide da bibliografia, adicione também à pasta os arquivos de estilo ([ABNT-FA.csl](https://github.com/bcdavasconcelos/CSL-ABNT-para-Autores-Antigos/blob/main/Pandoc/ABNT-FA.csl)) e da bibliografia em formato BibTeX ou JSON. Em caso de dúvida, consulte [a documentação do pandoc](https://pandoc.org/MANUAL.html#citations) ou abra um `issue` neste repositório.  
 
 ```bash
 
