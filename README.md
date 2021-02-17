@@ -184,3 +184,14 @@ Se você quiser que o Pandoc cuide da bibliografia, adicione também à pasta os
 ```
 
 Para entender um pouco mais sobre como funcionam os comandos do Pandoc, [confira esta página](https://gdct.blot.im/pandoc).  
+
+
+## Agradecimentos
+
+Outros projetos que não foram mencionados, mas que tornaram o ABNTeX-o-matic possível:
+
+A inspiração veio do [Scrivomatic](https://github.com/iandol/scrivomatic) e foi possível graças ao [Pandocomatic](https://github.com/htdebeer/pandocomatic).
+
+O template LaTeX veio em grande medida do [Mimosis](https://github.com/Pseudomanifold/latex-mimosis).
+
+Algumas ideias para a adaptação do template Mimosis para a ABNT vieram do [Limarka](https://github.com/abntex/trabalho-academico-limarka).
