@@ -21,117 +21,33 @@ Toda a tese pode ser gerada a partir de um simples arquivo em formato markdown c
 
 ```markdown
 ---
-titulo: 'A insustentável leveza dos entes matemáticos'
-autor: 'João Sebastião Ribeiro'
-orientador: 'Prof. Dr. Antonio Salieri'
-faculdade: 'Faculdade de Filosofia e Ciências Humanas da Universidade Federal de Minas Gerais'
-lugar: 'Belo Horizonte - MG'
-ano: '2021'
-grau: 'Doutor'
-curso: 'Filosofia'
-tipodetrabalho: 'Tese'
-linhadepesquisa: 'Filosofia Antiga e Medieval'
-mainfont: 'Alegreya'
-sansfont: 'Alegreya Sans'
-book: true    
-top-level-division: chapter    
-dedicatoria: |
-  Dedico a tese ao verme que primeiro roer a fria carne de meu cadáver.  
-agradecimentos: |
-  Ao Brasil, por eleger Bolsonaro e mostrar que o ruim sempre pode ficar pior.  
-epigrafe: |
-  She should have died hereafter;      
-  There would have been a time for such a word.      
-  To-morrow, and to-morrow, and to-morrow,      
-  Creeps in this petty pace from day to day,      
-  To the last syllable of recorded time;      
-  And all our yesterdays have lighted fools      
-  The way to dusty death.      
-  Out, out, brief candle!      
-  Life is but a walking shadow, a poor player      
-  That struts and frets his hour upon the stage      
-  And then is heard no more. It is a tale      
-  Told by an idiot, full of sound and fury      
-  Signifying nothing.      
-
-  --- Macbeth (Act 5, Scene 5, lines 17–28)  
-advertencia: |
-  Este trabalho foi realizado com atenção às diretrizes da *Associação Brasileira de Normas Técnicas* (ABNT). No entanto, no que toca à citação e referência de autores antigos, seguimos as normas consagradas no meio dos Estudos Clássicos; isto é, citar os autores a partir da numeração presente na edição de referência do texto grego, e não a partir das traduções e edições recentes.   
-resumo: |
-  Texto do resumo  
-abstract: |
-  The content of the abstract  
-abreviacoes: |
-  **Aristóteles**  
-  APo - *Analytica Posteriora*  
-  APr - *Analytica Priora*  
-  Aud - *de Audibilibus*  
-  Cael - *de Caelo*  
-  Cat - *Categoriae*  
-  Col - *de Coloribus*  
-  DA - *de Anima*  
-  DivSomn - *de Divinatione per Somnia*  
-  EE - *Ethica Eudemia*  
-  EN - *Ethica Nicomachea*  
-  GA - *de Generatione Animalium*  
-  GC - *de Generatione et Corruptione*  
-  HA - *Historia Animalium*  
-  IA - *de Incessu Animalium*  
-  Insomn - *de Insomniis*  
-  Int - *de Interpretatone*  
-  Juv - *de Juventute*  
-  LI - *de Lineis Insecabilibus*  
-  Long - *De Longitudine et Brevitate Vitae*  
-  MA - *de Motu Animalium*  
-  MM - *Magna Moralia*  
-  Mech - *Mechanica*  
-  Mem - *de Memoria*  
-  Metaph - *Metaphysica*  
-  Mete - *Meteorologica*  
-  Mir - *Mirabilia*  
-  Mu - *de Mundo*  
-  Oec - *Oeconomica*  
-  PA - *de Partibus Animalium*  
-  Phys - *Physica*  
-  Phgn - *Physiognomonica*  
-  Poet - *Poetica*  
-  Pol - *Politica*  
-  Pr - *Problemata*  
-  Resp - *de Respiratione*  
-  Rhet - *Rhetorica*  
-  RhAl - *Rhetorica ad Alexandrum*  
-  SE - *De Sophisticis Elenchis*  
-  Sensu - *de Sensu et Sensibilibus*  
-  SomnVig - *de Somno et Vigilia*  
-  Spir - *de Spiritu*  
-  Top - *Topica*  
-  VV - *de Virtutibus et Vitiis*  
-  Vent - *de Ventis*  
-  Xen - *de Xenophane*  
-
-  **Platão **  
-  Apol - *Apologia*  
-  Charm - *Cármides*  
-  Crat - *Crátilo*  
-  Crit - *Críton*  
-  Euth - *Eutidemo*  
-  Euth - *Eutífron*  
-  Gorg - *Górgias*  
-  Lach - *Laques*  
-  Lg - *Leis*  
-  Lys - *Lísis*  
-  Men - *Mênon*  
-  Parm - *Parmênides*  
-  Phae - *Fedro*  
-  Phae - *Fédon*  
-  Philb - *Filebo*  
-  Prot - *Protágoras*  
-  Rep - *República*  
-  Soph - *Sofista*  
-  State - *Político*  
-  Symp - *Simpósio*  
-  Thea - *Teeteto*  
-  Tim - *Timeu*  
+### Opções ###
+capa: true
+sumario: true
+alegreyamainfont: true
+mainfont: ''
+sansfont: ''
+monofont: ''
+### Metadados ###
+autor:
+titulo:
+faculdade:
+subtitulo:
+lugar:
+ano:
+tipodetrabalho:
+curso:
+faculdade:
+grau:
+orientador:
+linhadepesquisa:
+dedicatoria:
+agradecimentos:
+epigrafe:
+advertencia:
+resumo:
+abstract:
+abreviacoes:  
 ---
 
 
@@ -179,7 +95,7 @@ Se você quiser que o Pandoc cuide da bibliografia, adicione também à pasta os
 
 ```bash
 
-/usr/local/bin/pandoc -s -f markdown "Sample.md" --metadata link-citations=true --pdf-engine=xelatex -C "--csl=ABNT-FA.csl" "--bibliography=All.json" "--template=abntex-o-matic.latex" --top-level-division=chapter --toc -o "Sample".pdf && open "Sample".pdf
+/usr/local/bin/pandoc -s -f markdown "Sample.md" --metadata link-citations=true --pdf-engine=xelatex -C "--csl=ABNT-FA.csl" "--bibliography=All.json" "--template=abntex-o-matic.latex" -o "Sample".pdf && open "Sample".pdf
 
 ```
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Identifier="006EC479-9CBA-4767-B36B-73C8872A0380" Version="2.0" Creator="SCRMAC-3.2.2-14632" Device="iMac" Author="" Modified="2021-02-17 19:24:50 -0300" ModID="83CFC3C3-9934-487E-BFB6-152065951593">
+<ScrivenerProject Identifier="006EC479-9CBA-4767-B36B-73C8872A0380" Version="2.0" Creator="SCRMAC-3.2.2-14632" Device="iMac" Author="" Modified="2021-02-19 00:00:08 -0300" ModID="9BBF0D8D-5C57-4DC0-B8D3-2E7AD4CC9A53">
     <Binder>
         <BinderItem UUID="E9D9D8AC-A90D-4919-8D17-092C3409BFCF" Type="Text" Created="2021-02-17 11:38:32 -0300" Modified="2021-02-17 11:40:15 -0300">
             <Title>Instruções</Title>
@@ -100,7 +100,7 @@
                 <Bookmark BinderUUID="A2B41CBB-24BD-418D-A5F0-C127C3176884"/>
             </Bookmarks>
             <Children>
-                <BinderItem UUID="52AE15AD-FD89-4920-BFC3-AA76CE3208B5" Type="Text" Created="2021-01-31 00:35:58 -0300" Modified="2021-02-17 18:34:20 -0300">
+                <BinderItem UUID="52AE15AD-FD89-4920-BFC3-AA76CE3208B5" Type="Text" Created="2021-01-31 00:35:58 -0300" Modified="2021-02-18 17:39:21 -0300">
                     <Title>ABNTex-o-matic</Title>
                     <MetaData>
                         <SectionType>149EB533-8F24-4D6B-852E-B7DC4395E9D0</SectionType>
@@ -108,7 +108,7 @@
                         <IconFileName>{🎛}</IconFileName>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>2015,0</TextSelection>
+                        <TextSelection>619,0</TextSelection>
                     </TextSettings>
                     <Bookmarks>
                         <Bookmark BinderUUID="9D2539A4-4C1F-4FE7-BD37-1350E0CC4257"/>
@@ -417,14 +417,14 @@
     </StatusSettings>
     <ProjectTargets Notify="Yes">
         <DraftTarget Type="Characters" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2021-04-01 22:50:06 -0300" IgnoreDeadline="Yes" ShowOverrun="Yes">0</DraftTarget>
-        <SessionTarget Type="Characters" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2021-02-18 00:00:00 -0300" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="Yes" WritingDays="1-2, 4-6" CanWriteOnDeadlineDate="No">5584</SessionTarget>
-        <PreviousSession Words="867" Characters="5419" Date="2021-02-17 18:32:56 -0300"/>
+        <SessionTarget Type="Characters" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2021-02-20 00:00:00 -0300" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="Yes" WritingDays="1-2, 4-6" CanWriteOnDeadlineDate="No">5584</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2021-02-19 00:00:06 -0300"/>
     </ProjectTargets>
-    <RecentWritingHistory Date="2021-02-17 00:00:00 -0300">
-        <DraftWordCount>597</DraftWordCount>
-        <DraftCharCount>3859</DraftCharCount>
-        <OtherWordCount>694</OtherWordCount>
-        <OtherCharCount>4306</OtherCharCount>
+    <RecentWritingHistory Date="2021-02-18 00:00:00 -0300">
+        <DraftWordCount>0</DraftWordCount>
+        <DraftCharCount>0</DraftCharCount>
+        <OtherWordCount>2</OtherWordCount>
+        <OtherCharCount>14</OtherCharCount>
     </RecentWritingHistory>
     <AutoCompleteList>
         <Completion Scope="-1">ABNTex-o-matic</Completion>
