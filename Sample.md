@@ -1,17 +1,17 @@
-<!-- Geralmente deixamos esse cabeçalho YAML (como é chamado) no topo do texto, mas não há nenhum problema em localiza-lo no final ou em qualquer outra parte do texto. É importante apenas ter certeza de que todos os dados estão preenchidos e entre aspas retas simples. Se você tiver algum problema durante a conversão, confira se as aspas são retas. --> 
+<!-- Geralmente deixamos o cabeçalho YAML no topo do texto, mas não há nenhum problema em localiza-lo no final ou em qualquer outra parte do texto. É importante apenas ter certeza de que todos os dados estão preenchidos e entre ASPAS RETAS simples (aspas curvas causam erro). Se você tiver algum problema durante a conversão, confira se as aspas são retas. --> 
 
 ---
 # Informações necessárias para gerar os elementos pré-textuais, como a capa.
 titulo: 'A insustentável leveza do ser(tão)'
 subtitulo:
-autor: 'João Sebastião Ribeiro'
-orientador: 'Prof. Dr. Antonio Salieri'
+autora: 'João Sebastião Ribeiro'
+orientadora: 'Prof. Dr. Antonio Salieri'
 faculdade: 'Faculdade de Filosofia e Ciências Humanas da Universidade Federal de Minas Gerais'
 lugar: 'Belo Horizonte - MG'
 ano: '2021'
-grau: 'Doutor'
+titulacao: 'Doutor'
 curso: 'Filosofia'
-tipodetrabalho: 'Tese'
+trabalho: 'Tese'
 linhadepesquisa: 'Filosofia Antiga e Medieval'
 # Configurações da aparência do documento final
 mainfont: 'Alegreya'

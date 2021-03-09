@@ -345,7 +345,7 @@ $endif$
 \setotherlanguage[variant=ancient]{greek}
 	\newcommand{\pt}[1]{\textportuges{#1}}
 	\newcommand{\grc}[1]{\textgreek{#1}} % Comando para facilitar a identificação de passagens em grego. \grc{ἐν ἀρχὴ ἦν ὁ λόγος...}
-	\newfontfamily{\greekfont}{Alegreya}
+	\newfontfamily{\greekfont}{$mainfont$}
 
 
 \let\subsubsection\subsection
@@ -387,10 +387,10 @@ $endif$
 %subtitulo:
 %lugar:
 %ano:
-%tipodetrabalho:
+%trabalho:
 %curso:
 %instituicao:
-%grau:
+%titulacao:
 %orientador:
 %linhadepesquisa:
 %dedicatoria:
@@ -407,7 +407,8 @@ $endif$
 %  Capa
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-$if(autor)$
+\author{$if(autor)$$autor$$endif$$if(autora)$$autora$$endif$}
+
 $if(titulo)$
 $if(instituicao)$
 $if(ano)$
@@ -420,7 +421,7 @@ $if(lugar)$
 	\begin{center}
 	
 	\textsc{$instituicao$}\\ \vspace*{2cm}
-	$autor$ \\ \vspace*{2cm}
+	\author \\ \vspace*{2cm}
 	
 	\begin{Huge} $titulo$ \\  \end{Huge} \vspace*{1cm}
 	\begin{Large} $if(subtitulo)$$subtitulo$$endif$ \end{Large} \vfill
@@ -441,7 +442,7 @@ $if(contracapa)$
 	
 	\begin{center}
 	
-	$autor$ \\ \vfill
+	\author \\ \vfill
     
     \begin{Huge} $titulo$ \end{Huge} \vspace*{1,5cm}
 	
@@ -456,11 +457,10 @@ $if(contracapa)$
   \end{titlepage}  
 $else$
 
-$if(tipodetrabalho)$
+$if(trabalho)$
 $if(linhadepesquisa)$
-$if(orientador)$
 $if(curso)$
-$if(grau)$
+$if(titulacao)$
 
 \newpage
 \thispagestyle{empty}  
@@ -471,10 +471,11 @@ $if(grau)$
     
     \begin{Huge} $titulo$ \end{Huge} \vspace*{1,5cm}
 	
-	\begin{quote} $tipodetrabalho$ apresentada ao programa de Pós-Graduação em $curso$ da $instituicao$, como requisito parcial para a obtenção do título de \emph{$grau$} em $curso$. \end{quote}  \vspace*{2cm}
+	\begin{quote} $trabalho$ apresentada ao programa de Pós-Graduação em $curso$ da $instituicao$, como requisito parcial para a obtenção do título de \emph{$titulacao$} em $curso$. \end{quote}  \vspace*{2cm}
 	
 	\begin{flushright} 
-	Orientador: $orientador$ \\ 
+	$if(orientador)$ Orientador: $orientador$ \\$endif$
+	$if(orientadora)$ Orientadora: $orientadora$ \\$endif$
 	Linha de Pesquisa: $linhadepesquisa$ \\ 
 	\end{flushright} \vfill 
 	
@@ -487,7 +488,6 @@ $if(grau)$
 $else$
 \end{titlepage}
 
-$endif$
 $endif$
 $endif$
 $endif$
