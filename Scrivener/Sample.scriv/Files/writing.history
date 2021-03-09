@@ -6,5 +6,7 @@
     <Day dwc="285" dcc="1745" dtwc="0" owc="0" occ="0" dtcc="0" s="4668" st="c">2021-02-15</Day>
     <Day dwc="8076" dcc="56277" owc="1792" occ="18946" s="5584" st="c">2021-02-16</Day>
     <Day dwc="597" dcc="3859" dtwc="0" owc="694" occ="4306" dtcc="0" s="5584" st="c">2021-02-17</Day>
-    <Day dwc="0" dcc="0" owc="0" occ="3" s="5584" st="c">2021-02-18</Day>
+    <Day dwc="0" dcc="0" owc="2" occ="12" s="5584" st="c">2021-02-20</Day>
+    <Day dwc="0" dcc="0" owc="-48" occ="-1222" s="5584" st="c">2021-03-02</Day>
+    <Day dwc="0" dcc="0" owc="0" occ="-1" s="5584" st="c">2021-03-09</Day>
 </WritingHistory>

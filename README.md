@@ -80,8 +80,8 @@ linhadepesquisa: 'Filosofia Antiga e Medieval'
 ```
 
 
-![](/Samples/2021-02-17_20-00-08.png)  
-![](/Samples/2021-02-17_19-56-59.png)  
+![](/img/2021-02-17_20-00-08.png)  
+![](/img/2021-02-17_19-56-59.png)  
 
 
 ## Elementos pré-textuais  
@@ -131,8 +131,8 @@ Uma advertência...
 
 
 
-![](/Samples/2021-02-17_19-57-26.png)
-![](/Samples/2021-02-17_19-57-42.png)
+![](/img/2021-02-17_19-57-26.png)
+![](/img/2021-02-17_19-57-42.png)
 
 A rigor, esse template diverge em detalhes muito pequenos das normas da ABNT. As margens, por exemplo, não são 3,3,2,2cm; ao invés disso, elas são automaticamente calculadas pelo mecanismo de conversão para obter o melhor resultado possível no posicionamento do texto.  
 

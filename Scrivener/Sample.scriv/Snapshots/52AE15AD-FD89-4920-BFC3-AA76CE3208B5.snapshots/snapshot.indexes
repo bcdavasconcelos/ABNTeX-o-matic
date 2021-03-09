@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SnapshotIndexes Version="1.0" BinderUUID="52AE15AD-FD89-4920-BFC3-AA76CE3208B5">
+    <Snapshot Date="2021-03-02 15:32:12 -0300">
+        <Title>Untitled (Save)</Title>
+        <Text># Importante: arquivos YAML usam espaços em branco para representar a estrutura, então não use tabulações (tab) e lembre-se de deixar as aspas retas ("") e manter os nomes de todos os campos de metadados em caixa baixa.
+titulo: 'A insustentável leveza do Ser-tão'
+subtitulo:
+autor: 'João Sebastião Ribeiro'
+orientador: 'Prof. Dr. Antonio Salieri'
+instituicao: 'Faculdade de Filosofia e Ciências Humanas da Universidade Federal de Minas Gerais'
+lugar: 'Belo Horizonte - MG'
+ano: '2021'
+grau: 'Doutor'
+curso: 'Filosofia'
+tipodetrabalho: 'Tese'
+linhadepesquisa: 'Filosofia Antiga e Medieval'
+mainfont: 'Alegreya'
+sansfont: 'Alegreya Sans'
+monofont: 'Consolas'
+sumario: true
+creditos: true
+indentarprimeiralinha: true
+indentarprimeiralinhaem: '' 
+mainfontalegreya: true
+citecolor: 'RoyalBlue'
+linkcolor: 'RoyalBlue'
+urlcolor: 'RoyalBlue'
+compiled: &lt;$shortdate&gt; </Text>
+    </Snapshot>
+    <Snapshot Date="2021-03-09 15:53:00 -0300">
+        <Title>Untitled (Save)</Title>
+        <Text># Importante: arquivos YAML usam espaços em branco para representar a estrutura, então não use tabulações (tab) e lembre-se de deixar as aspas retas ("") e manter os nomes de todos os campos de metadados em caixa baixa.
+titulo: 'A insustentável leveza do Ser-tão'
+subtitulo:
+autor: 'João Sebastião Ribeiro'
+orientador: 'Prof. Dr. Antonio Salieri'
+instituicao: 'Faculdade de Filosofia e Ciências Humanas da Universidade Federal de Minas Gerais'
+lugar: 'Belo Horizonte - MG'
+ano: '2021'
+titulacao: 'Doutor'
+curso: 'Filosofia'
+trabalho: 'Tese'
+linhadepesquisa: 'Filosofia Antiga e Medieval'
+mainfont: 'Alegreya'
+sansfont: 'Alegreya Sans'
+monofont: 'Consolas'
+sumario: true
+creditos: true
+indentarprimeiralinha: true
+indentarprimeiralinhaem: '' 
+mainfontalegreya: true
+citecolor: 'RoyalBlue'
+linkcolor: 'RoyalBlue'
+urlcolor: 'RoyalBlue'
+compiled: &lt;$shortdate&gt; </Text>
+    </Snapshot>
+</SnapshotIndexes>

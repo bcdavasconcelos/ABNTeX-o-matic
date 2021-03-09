@@ -4,8 +4,8 @@
 # Informações necessárias para gerar os elementos pré-textuais, como a capa.
 titulo: 'A insustentável leveza do ser(tão)'
 subtitulo:
-autora: 'João Sebastião Ribeiro'
-orientadora: 'Prof. Dr. Antonio Salieri'
+autor: 'João Sebastião Ribeiro'
+orientador: 'Prof. Dr. Antonio Salieri'
 faculdade: 'Faculdade de Filosofia e Ciências Humanas da Universidade Federal de Minas Gerais'
 lugar: 'Belo Horizonte - MG'
 ano: '2021'
@@ -14,13 +14,15 @@ curso: 'Filosofia'
 trabalho: 'Tese'
 linhadepesquisa: 'Filosofia Antiga e Medieval'
 # Configurações da aparência do documento final
-mainfont: 'Alegreya'
+# Para usar a fonte alegreya, basta remover o "#" da opção abaixo.
+mainfontalegreya: true
+mainfont: 'Minion Pro'
 citecolor: 'RoyalBlue'
 linkcolor: 'RoyalBlue'
 sansfont: 'Alegreya Sans'
 monofont: 'Menlo'
 urlcolor: 'RoyalBlue'
-compiled: 17/02/21    
+compiled: 09/03/2021
 # Não alterar sob o risco de comprometer a correta leitura da hierarquia das seções
 book: true    
 top-level-division: chapter    
