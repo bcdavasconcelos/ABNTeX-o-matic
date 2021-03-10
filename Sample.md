@@ -1,5 +1,3 @@
-<!-- Geralmente deixamos o cabeçalho YAML no topo do texto, mas não há nenhum problema em localiza-lo no final ou em qualquer outra parte do texto. É importante apenas ter certeza de que todos os dados estão preenchidos e entre ASPAS RETAS simples (aspas curvas causam erro). Se você tiver algum problema durante a conversão, confira se as aspas são retas. --> 
-
 ---
 # Informações necessárias para gerar os elementos pré-textuais, como a capa.
 titulo: 'A insustentável leveza do ser(tão)'
@@ -27,6 +25,8 @@ compiled: 09/03/2021
 book: true    
 top-level-division: chapter    
 ---
+
+<!-- Geralmente deixamos o cabeçalho YAML no topo do texto, mas não há nenhum problema em localiza-lo no final ou em qualquer outra parte do texto. É importante apenas ter certeza de que todos os dados estão preenchidos e entre ASPAS RETAS simples (aspas curvas causam erro). Se você tiver algum problema durante a conversão, confira se as aspas são retas. --> 
 
 <!--- Para facilitar a vida do usuário, vamos desenvolver as páginas iniciais usando seções do texto. Dizendo de outro modo, estes elementos como resumo, agradecimentos, etc... deveriam fazer parte do cabeçalho acima, mas vamos usar um filtro na conversão que o colocará no lugar correto para nós. É importante apenas não mudar o nome das seções. -->
 
