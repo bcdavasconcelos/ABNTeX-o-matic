@@ -51,7 +51,7 @@ Como o template foi criado sobretudo para trabalhos em língua portuguesa, as va
 
 Variáveis opcionais para elementos pré-textuais: `dedicatoria, agradecimentos, epigrafe, advertencia, resumo, abstract, abreviacoes`.  
 
-E, por fim, variáveis opcionais que controlam alguns aspectos da aparência do produto final: `creditos, compilado, mainfont, mainfontoptions, sansfont, sansfontoptions, monofont, colorlinks, linkcolor, citecolor, urlcolor, lang`.  
+E, por fim, variáveis opcionais que controlam alguns aspectos da aparência do produto final: `creditos, indentarprimeiralinha, indentarprimeiralinhaem, compilado, mainfont, mainfontoptions, sansfont, sansfontoptions, monofont, colorlinks, linkcolor, citecolor, urlcolor, lang`.  
 
 A bibliografia pode ser especificada como uma variável também: `bibliography, bib-style, bib-title` ou incluída diretamente no comando que utilizaremos para fazer a conversão do texto.
 
