@@ -62,6 +62,12 @@
 \newcommand{\comment}[1]{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tight-list
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fonts & colours
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage[usenames,dvipsnames]{xcolor}
@@ -253,6 +259,7 @@ $endif$
 
 \usepackage{bookmark}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Pacote para epígrafes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -302,26 +309,29 @@ $endif$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % O template original utilizada a Minion Pro. Eu prefiro a Alegreya, mas ambas produzem bons resultados.
 
-$if(mainfontalegreya)$
-\usepackage{Alegreya,AlegreyaSans}
-\setmainfont[Ligatures=TeX,Numbers=OldStyle]{Alegreya}
-\setsansfont[]{Alegreya Sans}
+
+$if(fontfamily)$
+\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $else$
+\usepackage{Alegreya,AlegreyaSans}
+$endif$
 
 $if(mainfont)$
-\setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}	
-$else$
-\setmainfont[Ligatures=TeX]{Minion Pro}
+  \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
 $endif$
 $if(sansfont)$
-\setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
-$endif$	
-
+  \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
 $endif$
-
 $if(monofont)$
-\setmonofont[$for(monofontoptions)$$monofontoptions$$sep$,$endfor$]{$monofont$}
+  \setmonofont[$for(monofontoptions)$$monofontoptions$$sep$,$endfor$]{$monofont$}
 $endif$
+
+$for(fontfamilies)$
+  \newfontfamily{$fontfamilies.name$}[$for(fontfamilies.options)$$fontfamilies.options$$sep$,$endfor$]{$fontfamilies.font$}
+$endfor$
+
+
+
 	
 \renewcommand{\th}{\textsuperscript{\textup{th}}\xspace}
 
@@ -344,13 +354,29 @@ $endif$
 \setdefaultlanguage[variant=brazilian]{portuguese}
 \setotherlanguage[variant=ancient]{greek}
 	\newcommand{\pt}[1]{\textportuges{#1}}
-	\newcommand{\grc}[1]{\textgreek{#1}} % Comando para facilitar a identificação de passagens em grego. \grc{ἐν ἀρχὴ ἦν ὁ λόγος...}
+
+% Comando para facilitar a identificação de passagens em grego. \grc{ἐν ἀρχὴ ἦν ὁ λόγος...}
+
+$if(greekfont)$
+	\newcommand{\grc}[1]{\textgreek{#1}} 
+	\newfontfamily{\greekfont}{$greekfont$}
+	$else$
+	\newcommand{\grc}[1]{\textgreek{#1}} 
 	\newfontfamily{\greekfont}{$mainfont$}
+$endif$
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Correção para tornar capítulos o nível mais alto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \let\subsubsection\subsection
 \let\subsection\section
 \let\section\chapter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -407,7 +433,6 @@ $endif$
 %  Capa
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\author{$if(autor)$$autor$$endif$$if(autora)$$autora$$endif$}
 
 $if(titulo)$
 $if(instituicao)$
@@ -421,7 +446,7 @@ $if(lugar)$
 	\begin{center}
 	
 	\textsc{$instituicao$}\\ \vspace*{2cm}
-	\author \\ \vspace*{2cm}
+	$if(autor)$$autor$$endif$$if(autora)$$autora$$endif$ \\ \vspace*{2cm}
 	
 	\begin{Huge} $titulo$ \\  \end{Huge} \vspace*{1cm}
 	\begin{Large} $if(subtitulo)$$subtitulo$$endif$ \end{Large} \vfill
@@ -442,7 +467,7 @@ $if(contracapa)$
 	
 	\begin{center}
 	
-	\author \\ \vfill
+	$if(autor)$$autor$$endif$$if(autora)$$autora$$endif$ \\ \vfill
     
     \begin{Huge} $titulo$ \end{Huge} \vspace*{1,5cm}
 	
@@ -467,7 +492,7 @@ $if(titulacao)$
 	
 	\begin{center}
 	
-	$autor$ \\ \vfill
+	$if(autor)$$autor$$endif$$if(autora)$$autora$$endif$ \\ \vfill
     
     \begin{Huge} $titulo$ \end{Huge} \vspace*{1,5cm}
 	
@@ -636,7 +661,6 @@ $if(sumario)$
 
 $endif$
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 					% Fim dos elementos pré-textuais
@@ -724,7 +748,7 @@ Compilado usando \emph{ABNTex-o-matic} para\\
 		\end{Huge}
  \vspace*{0,5cm}		
 
-$if(compiled)$ Em $compiled$ $endif$
+$if(compilado)$ Em $compilado$ $endif$
 		 
 \end{onehalfspace}		
 \end{center}
