@@ -1,0 +1,53 @@
+verbosity: ERROR
+from: markdown
+to: latex
+standalone: true
+template: /Users/bcdav/Dropbox/Application Support/BBEdit/Pandoc/templates/abntex-o-matic.latex
+filters:
+  - md-contracapa.lua
+  - md-dedicatoria.lua
+  - md-epigrafe.lua
+  - md-agradecimentos.lua
+  - md-resumo.lua
+  - md-abstract.lua
+  - md-advertencia.lua
+  - md-abreviacoes.lua
+  - md-introducao.lua
+metadata:
+  titulo: ''
+  autor: 'Bernardo C.D.A. Vasconcelos'
+  orientador: ''
+  instituicao: 'Faculdade de Filosofia e Ciências Humanas da Universidade Federal de Minas Gerais' 
+  lugar: 'Belo Horizonte - MG'
+  ano: '2021'
+  titulacao: 'Doutor'
+  curso: 'Filosofia'
+  trabalho: 'Tese'
+  linhadepesquisa: 'Filosofia Antiga e Medieval'
+  fontfamily: 'Alegreya'
+  mainfont: 'Alegreya'
+  mainfontoptions: 'Ligatures=TeX,Numbers=OldStyle'
+  sansfont: 'Alegreya Sans'
+  sansfontoptions: 'Ligatures=TeX,Numbers=OldStyle' 
+  monofont: 'Consolas'
+  greekfont: 'Alegreya'
+  capa: true
+  sumario: true
+  creditos: true
+  indentarprimeiralinha: true
+  matematica: false
+  citecolor: 'OliveGreen'
+  linkcolor: 'Black'
+  urlcolor: 'Black'
+  printshorthands: true
+  citeproc: false 
+  biblatex-phi: true
+  glossary: true
+  index: true
+  lang: 'pt-BR'
+  nonumberfigures: true
+  colorlinks: true
+fail-if-warnings: false
+dump-args: false
+ignore-args: false
+trace: false  

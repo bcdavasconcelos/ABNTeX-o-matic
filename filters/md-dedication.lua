@@ -1,29 +1,29 @@
 --[[
-epigrafe-to-meta – move an "epigrafe" section into document metadata
+dedication-to-meta – move an "dedication" section into document metadata
 
 Copyright: © 2017–2021 Albert Krewinkel
 License:   MIT – see LICENSE file for details
 ]]
-local epigrafe = {}
+local dedication = {}
 
---- Extract epigrafe from a list of blocks.
-function epigrafe_from_blocklist (blocks)
+--- Extract dedication from a list of blocks.
+function dedication_from_blocklist (blocks)
   local body_blocks = {}
-  local looking_at_epigrafe = false
+  local looking_at_dedication = false
 
   for _, block in ipairs(blocks) do
     if block.t == 'Header' and block.level == 1 then
-      if block.identifier == 'epigrafe' then
-        looking_at_epigrafe = true
+      if block.identifier == 'dedication' then
+        looking_at_dedication = true
       else
-        looking_at_epigrafe = false
+        looking_at_dedication = false
         body_blocks[#body_blocks + 1] = block
       end
-    elseif looking_at_epigrafe then
+    elseif looking_at_dedication then
       if block.t == 'HorizontalRule' then
-        looking_at_epigrafe = false
+        looking_at_dedication = false
       else
-        epigrafe[#epigrafe + 1] = block
+        dedication[#dedication + 1] = block
       end
     else
       body_blocks[#body_blocks + 1] = block
@@ -36,10 +36,10 @@ end
 if PANDOC_VERSION >= {2,9,2} then
   -- Check all block lists with pandoc 2.9.2 or later
   return {{
-      Blocks = epigrafe_from_blocklist,
+      Blocks = dedication_from_blocklist,
       Meta = function (meta)
-        if not meta.epigrafe and #epigrafe > 0 then
-          meta.epigrafe = pandoc.MetaBlocks(epigrafe)
+        if not meta.dedication and #dedication > 0 then
+          meta.dedication = pandoc.MetaBlocks(dedication)
         end
         return meta
       end
@@ -49,9 +49,9 @@ else
   return {{
       Pandoc = function (doc)
         local meta = doc.meta
-        local other_blocks = epigrafe_from_blocklist(doc.blocks)
-        if not meta.epigrafe and #epigrafe > 0 then
-          meta.epigrafe = pandoc.MetaBlocks(epigrafe)
+        local other_blocks = dedication_from_blocklist(doc.blocks)
+        if not meta.dedication and #dedication > 0 then
+          meta.dedication = pandoc.MetaBlocks(dedication)
         end
         return pandoc.Pandoc(other_blocks, meta)
       end,

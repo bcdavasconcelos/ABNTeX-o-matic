@@ -1,0 +1,13 @@
+verbosity: INFO # verbose by default
+citeproc: true
+cite-method: citeproc
+bibliography: |
+  /Users/bcdav/Dropbox/Application Support/BBEdit/Pandoc/refs/Content.json
+citation-abbreviations: 
+csl: |
+  /Users/bcdav/Dropbox/Application Support/BBEdit/Pandoc/csl/abnt-phi.csl
+reference-links: true
+metadata:
+  reference-section-title: Bibliografia
+  notes-after-punctuation: false
+  link-citations: true

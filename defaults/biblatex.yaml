@@ -1,0 +1,4 @@
+verbosity: ERROR # verbose by default
+citeproc: false
+metadata:
+  Biblatex-Phi: true

@@ -15,7 +15,7 @@ trabalho: 'Tese'
 linhadepesquisa: 'Filosofia Antiga e Medieval'
 # Configurações da aparência do documento final
 # Para usar a fonte alegreya, basta remover o "#" da opção abaixo.
-mainfontalegreya: true
+#mainfontalegreya: true
 mainfont: 'Minion Pro'
 citecolor: 'RoyalBlue'
 linkcolor: 'RoyalBlue'

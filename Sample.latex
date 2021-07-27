@@ -1,0 +1,727 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						% ABNTeX-o-matic %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pacotes carregados pelo template Mimosis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NeedsTeXFormat{LaTeX2e}
+
+
+\documentclass[paper=a4,
+           oneside,
+           pagesize,
+           fontsize=12pt,
+           DIV=10,                % TODO: Make configurable
+           BCOR=10mm,             % TODO: Make configurable
+           cleardoublepage=empty,
+           numbers=noenddot,
+           titlepage,
+           toc=bibliography,
+           toc=index,]{scrbook}
+
+
+
+\RequirePackage{ifpdf}
+\RequirePackage{ifxetex}
+\RequirePackage{ifluatex}
+
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+\ifxetexorluatex
+  \RequirePackage{fontspec}
+\else
+  \RequirePackage[utf8]{inputenc}
+\fi
+
+% Makes it possible to switch between different languages in the text
+% while keeping hyphenation rules correct. Should you add another one
+% in the list, please ensure that `english` is the last one. The last
+% language is used to control standard hyphenation.
+\usepackage[ngerman,french,english,brazil]{babel}
+
+\RequirePackage{csquotes} % Context-sensitive quotation marks
+\RequirePackage{makeidx}  % For creating indices
+\RequirePackage{xspace}   % For automatically "eating" spaces
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Multi-line comments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\comment}[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tight-list
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fonts & colours
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[usenames,dvipsnames]{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Graphics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{graphicx}
+\graphicspath{%
+  {Figures/}
+  {./}
+}
+
+% Suppress warnings about page groups in PDFs. This is not justified
+% in most of the cases. I am pretty sure I am including my images in
+% the right manner.
+\begingroup\expandafter\expandafter\expandafter\endgroup
+\expandafter\ifx\csname pdfsuppresswarningpagegroup\endcsname\relax
+\else
+  \pdfsuppresswarningpagegroup=1\relax
+\fi
+
+\RequirePackage{subcaption}
+
+% Make sub-references using \subref being typeset with parentheses.
+% Otherwise, only the counter will be printed.
+\captionsetup{subrefformat=parens}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paragraph lists & compact enumerations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[%
+    olditem,  % Do not modify itemize environments by default
+    oldenum   % Do not modify enumerate environments by default
+  ]{paralist}
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Proper typesetting of units
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[binary-units=true]{siunitx}
+
+\sisetup{%
+  detect-all           = true,
+  detect-family        = true,
+  detect-mode          = true,
+  detect-shape         = true,
+  detect-weight        = true,
+  detect-inline-weight = math,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathematics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{dsfont}
+
+% Fix the spacing of \left and \right. Use these with the proper bracket
+% in order to ensure that they scale automatically.
+\let\originalleft\left
+\let\originalright\right
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+\renewcommand{\right}{\aftergroup\egroup\originalright}
+
+\DeclareMathOperator*{\argmin}          {arg\,min}
+\DeclareMathOperator {\dist}            {dist}
+\DeclareMathOperator {\im}              {im}
+
+\newcommand{\domain}{\ensuremath{\mathds{D}}}
+\newcommand{\real}  {\ensuremath{\mathds{R}}}
+
+% Proper differential operators
+\newcommand{\diff}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ordinals
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand  {\st}{\textsuperscript{\textup{st}}\xspace}
+\newcommand  {\rd}{\textsuperscript{\textup{rd}}\xspace}
+\newcommand  {\nd}{\textsuperscript{\textup{nd}}\xspace}
+\renewcommand{\th}{\textsuperscript{\textup{th}}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Penalties
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clubpenalty         = 10000
+\widowpenalty        = 10000
+\displaywidowpenalty = 10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Headers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[singlespacing=true]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\renewcommand*{\chaptermarkformat}{}
+
+
+%%%---Set up clickable section headers----------
+% make headings back-links to TOC
+% See https://tex.stackexchange.com/a/251964/73149, 
+% and https://tex.stackexchange.com/questions/412773/
+\makeatletter
+% configure chapter back-links
+\let\hyperchapter\chapter
+\def\chapter{\@ifstar\starchapter\mychapter}
+\def\starchapter{\hyperchapter*}
+\newcommand{\mychapter}[2][]% #1=optional (toc and top of page), #2=title
+{\ifx#1 \hyperchapter[#2]{\hyperlink{toc.chapter.\thechapter}{#2}}
+ \else \hyperchapter[#1]{\hyperlink{toc.chapter.\thechapter}{#2}}
+ \fi}
+% configure section back-links
+\let\hypersection\section
+\def\section{\@ifstar\starsection\mysection}
+\def\starsection{\hypersection*}
+\newcommand{\mysection}[2][\@empty]% #1=optional (toc), #2=title
+{\ifx#1\@empty \hypersection[#2]{\hyperlink{toc.section.\thesection}{#2}}
+ \else \hypersection[#1]{\hyperlink{toc.section.\thesection}{#2}}
+ \fi}
+ % configure subsection back-links
+\let\hypersubsection\subsection
+\def\subsection{\@ifstar\starsubsection\mysubsection}
+\def\starsubsection{\hypersubsection*}
+\newcommand{\mysubsection}[2][\@empty]% #1=optional (toc), #2=title
+{\ifx#1\@empty \hypersubsection[#2]{\hyperlink{toc.subsection.\thesubsection}{#2}}
+ \else \hypersubsection[#1]{\hyperlink{toc.subsection.\thesubsection}{#2}}
+ \fi}
+% configure subsubsection back-links
+\let\hypersubsubsection\subsubsection
+\def\subsubsection{\@ifstar\starsubsubsection\mysubsubsection}
+\def\starsubsubsection{\hypersubsubsection*}
+\newcommand{\mysubsubsection}[2][\@empty]% #1=optional (toc), #2=title
+{\ifx#1\@empty \hypersubsubsection[#2]{\hyperlink{toc.subsubsection.\thesubsubsection}{#2}}
+ \else \hypersubsubsection[#1]{\hyperlink{toc.subsubsection.\thesubsubsection}{#2}}
+ \fi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Typefaces for parts, chapters, and sections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\partformat}{\huge\partname~\thepart\autodot}
+\renewcommand{\raggedpart}{\flushleft}
+
+\setkomafont{part}{\normalfont\huge\scshape}
+
+\setkomafont{sectioning}{\normalfont\scshape}
+\setkomafont{descriptionlabel}{\normalfont\bfseries}
+
+\setkomafont{caption}{\small}
+\setkomafont{captionlabel}{\usekomafont{caption}}
+
+% Large number for chapter
+\renewcommand*{\chapterformat}{%
+  \fontsize{30}{35}\selectfont\thechapter\autodot\enskip
+}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ajustes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Indentar primeira linha do parágrafo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Paracol e multicol
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multicol} %\begin{multicols}{2}
+\usepackage{paracol} %\begin{paracol}{2}  \switchcolumn \end{paracol}
+\usepackage{array}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fonte pequenas e espaçamento simples nas citações
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\singlespacing\small}
+\renewenvironment{quote}{%
+   \list{}{%
+     \leftmargin4cm   % this is the adjusting screw
+     \rightmargin0cm
+   }
+   \item\relax
+}
+{\endlist}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Espaçamento simples no ambiente paracol
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginEnvironment{paracol}{\singlespacing\small}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Parte do original. Função?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[binary-units=true]{siunitx}
+\DeclareSIUnit\px{px}
+
+\sisetup{%
+  detect-all           = true,
+  detect-family        = true,
+  detect-mode          = true,
+  detect-shape         = true,
+  detect-weight        = true,
+  detect-inline-weight = math,
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hyperlinks & bookmarks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[%
+  colorlinks = true,
+  citecolor  =  RoyalBlue ,
+  linkcolor  =  RoyalBlue ,
+  urlcolor   =  RoyalBlue ,
+  ]{hyperref}
+
+\usepackage{bookmark}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pacote para epígrafes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{epigraph}
+% \epigraph{Citação}{Fonte}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliografia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A aparência será determinada pelo arquivo CSL.
+
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+  \newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{1em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fontes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% O template original utilizada a Minion Pro. Eu prefiro a Alegreya, mas ambas produzem bons resultados.
+
+
+\usepackage{Alegreya,AlegreyaSans}
+
+  \setmainfont[]{Minion Pro}
+  \setsansfont[]{Alegreya Sans}
+  \setmonofont[]{Menlo}
+
+
+
+
+	
+\renewcommand{\th}{\textsuperscript{\textup{th}}\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ajustes para o logo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{metalogo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Espaçamento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[doublespacing]{setspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Polyglossia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Melhor carregar por último.
+
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=brazilian]{portuguese}
+\setotherlanguage[variant=ancient]{greek}
+	\newcommand{\pt}[1]{\textportuges{#1}}
+
+% Comando para facilitar a identificação de passagens em grego. \grc{ἐν ἀρχὴ ἦν ὁ λόγος...}
+
+	\newcommand{\grc}[1]{\textgreek{#1}} 
+	\newfontfamily{\greekfont}{Minion Pro}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Correção para tornar capítulos o nível mais alto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\let\subsubsection\subsection
+\let\subsection\section
+\let\section\chapter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+					% Fim da preparação dos pacotes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+							% Incipit
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\frontmatter
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			%  Elementos pré-textuais (a.k.a. frontmatter)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para que a capa seja impressa e os elementos pré-textuais sejam devidamente preenchidos, é preciso passar esses dados adiante para o PANDOC via cabeçalho YAML.
+
+%sumario: true
+%autor:
+%titulo:
+%instituicao:
+%subtitulo:
+%lugar:
+%ano:
+%trabalho:
+%curso:
+%instituicao:
+%titulacao:
+%orientador:
+%linhadepesquisa:
+%dedicatoria:
+%agradecimentos:
+%epigrafe:
+%advertencia:
+%resumo:
+%abstract:
+%abreviacoes:
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Capa
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+  
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Demais elementos pré-textuais
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+ 	
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sumário
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+					% Fim dos elementos pré-textuais
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+					% Início da parte principal
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+  \clearpage
+	\hypertarget{dedicatoria}{%
+ \chapter{Dedicatoria}\label{dedicatoria}}
+
+ Dedico a tese ao verme que primeiro roer a fria carne de meu cadáver.
+
+ \hypertarget{agradecimentos}{%
+ \chapter{Agradecimentos}\label{agradecimentos}}
+
+ Ao Brasil, por eleger Bolsonaro e mostrar que o ruim sempre pode ficar
+ pior.
+
+ \hypertarget{epigrafe}{%
+ \chapter{Epigrafe}\label{epigrafe}}
+
+ And all our yesterdays have lighted fools\\
+ The way to dusty death.
+
+ Macbeth (Act 5, Scene 5, lines 17--28)
+
+ \hypertarget{advertencia}{%
+ \chapter{Advertencia}\label{advertencia}}
+
+ Este trabalho foi realizado com atenção às diretrizes da
+ \emph{Associação Brasileira de Normas Técnicas} (ABNT). No entanto, no
+ que toca à citação e referência de autores antigos, seguimos as normas
+ consagradas no meio dos Estudos Clássicos; isto é, citar os autores a
+ partir da numeração presente na edição de referência do texto grego, e
+ não a partir das traduções e edições recentes.
+
+ \hypertarget{resumo}{%
+ \chapter{Resumo}\label{resumo}}
+
+ Texto do resumo
+
+ \hypertarget{abstract}{%
+ \chapter{Abstract}\label{abstract}}
+
+ The content of the abstract
+
+ \hypertarget{abreviacoes}{%
+ \chapter{Abreviacoes}\label{abreviacoes}}
+
+ \textbf{Aristóteles}\\
+ APo - \emph{Analytica Posteriora}\\
+ APr - \emph{Analytica Priora}\\
+ Aud - \emph{de Audibilibus}\\
+ Cael - \emph{de Caelo}\\
+ Cat - \emph{Categoriae}\\
+ Col - \emph{de Coloribus}\\
+ DA - \emph{de Anima}\\
+ DivSomn - \emph{de Divinatione per Somnia}\\
+ EE - \emph{Ethica Eudemia}\\
+ EN - \emph{Ethica Nicomachea}\\
+ GA - \emph{de Generatione Animalium}\\
+ GC - \emph{de Generatione et Corruptione}\\
+ HA - \emph{Historia Animalium}\\
+ IA - \emph{de Incessu Animalium}\\
+ Insomn - \emph{de Insomniis}\\
+ Int - \emph{de Interpretatone}\\
+ Juv - \emph{de Juventute}\\
+ LI - \emph{de Lineis Insecabilibus}\\
+ Long - \emph{De Longitudine et Brevitate Vitae}\\
+ MA~- \emph{de Motu Animalium}\\
+ MM - \emph{Magna Moralia}\\
+ Mech - \emph{Mechanica}\\
+ Mem - \emph{de Memoria}\\
+ Metaph - \emph{Metaphysica}\\
+ Mete - \emph{Meteorologica}\\
+ Mir - \emph{Mirabilia}\\
+ Mu - \emph{de Mundo}\\
+ Oec - \emph{Oeconomica}\\
+ PA - \emph{de Partibus Animalium}\\
+ Phys - \emph{Physica}\\
+ Phgn - \emph{Physiognomonica}\\
+ Poet - \emph{Poetica}\\
+ Pol - \emph{Politica}\\
+ Pr - \emph{Problemata}\\
+ Resp - \emph{de Respiratione}\\
+ Rhet - \emph{Rhetorica}\\
+ RhAl - \emph{Rhetorica ad Alexandrum}\\
+ SE - \emph{De Sophisticis Elenchis}\\
+ Sensu - \emph{de Sensu et Sensibilibus}\\
+ SomnVig - \emph{de Somno et Vigilia}\\
+ Spir - \emph{de Spiritu}\\
+ Top - \emph{Topica}\\
+ VV - \emph{de Virtutibus et Vitiis}\\
+ Vent - \emph{de Ventis}\\
+ Xen - \emph{de Xenophane}
+
+ \textbf{Platão }\\
+ Apol - \emph{Apologia}\\
+ Charm - \emph{Cármides}\\
+ Crat - \emph{Crátilo}\\
+ Crit - \emph{Críton}\\
+ Euth - \emph{Eutidemo}\\
+ Euth - \emph{Eutífron}\\
+ Gorg - \emph{Górgias}\\
+ Lach - \emph{Laques}\\
+ Lg - \emph{Leis}\\
+ Lys - \emph{Lísis}\\
+ Men - \emph{Mênon}\\
+ Parm - \emph{Parmênides}\\
+ Phae - \emph{Fedro}\\
+ Phae - \emph{Fédon}\\
+ Philb - \emph{Filebo}\\
+ Prot - \emph{Protágoras}\\
+ Rep - \emph{República}\\
+ Soph - \emph{Sofista}\\
+ State - \emph{Político}\\
+ Symp - \emph{Simpósio}\\
+ Thea - \emph{Teeteto}\\
+ Tim - \emph{Timeu}
+
+ \hypertarget{capuxedtulo-1}{%
+ \chapter{Capítulo 1}\label{capuxedtulo-1}}
+
+ Introdução ao capítulo 1
+
+ \hypertarget{seuxe7uxe3o-1}{%
+ \section{Seção 1}\label{seuxe7uxe3o-1}}
+
+ Texto formatado em \emph{itálico} ou \textbf{negrito} com uso de
+ referências (\protect\hyperlink{ref-Metaph_Ross_a}{ROSS}
+ \protect\hyperlink{ref-Metaph_Ross_a}{1924}, p.~134) e notas de
+ rodapé\footnote{Eu sou uma nota de rodapé e posso ficar em qualquer
+   lugar do texto.}.
+
+ \hypertarget{seuxe7uxe3o-2}{%
+ \section{Seção 2}\label{seuxe7uxe3o-2}}
+
+ E com uso de citações em bloco:
+
+ \begin{quote}
+ Citação em bloco de mais de 3 linhas ilustrada com o glorioso lorem
+ ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+ eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+ minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+ ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+ voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+ sint occaecat cupidatat non proident, sunt in culpa qui officia
+ deserunt mollit anim id est laborum.
+ \end{quote}
+
+ \hypertarget{capuxedtulo-2}{%
+ \chapter{Capítulo 2}\label{capuxedtulo-2}}
+
+ A hierarquia é definida pelo nível dos cabeçalhos. ``\#'' indica um
+ capítulo, enquanto ``\#\#'' indica uma seção. Os níveis vão de h1-h4
+ (capítulo, seção, subseção, parágrafo).
+
+ \hypertarget{seuxe7uxe3o-1-1}{%
+ \section{Seção 1}\label{seuxe7uxe3o-1-1}}
+
+ Seção com uso de referências (\protect\hyperlink{ref-Carr2005}{CARR;
+ STEUTEL} \protect\hyperlink{ref-Carr2005}{1999}, p.~90) e mais notas de
+ rodapé\footnote{Essa nota pode ficar logo abaixo do parágrafo de onde
+   ela provém ou mesmo no fim do documento.}.
+
+ \hypertarget{seuxe7uxe3o-2-1}{%
+ \section{Seção 2}\label{seuxe7uxe3o-2-1}}
+
+ É rápido, prático e fácil. Sem qualquer necessidade de gastar horas
+ formatando um documento do Word
+ (\protect\hyperlink{ref-deHaas2004}{HAAS; MANSFELD}
+ \protect\hyperlink{ref-deHaas2004}{2004}, p.~4). Para que as
+ referências bibliográficas funcionem, pode ser interessante ativar uma
+ função do Zotero que mantém a biblioteca sincronizada com um arquivo
+ BibTeX externo. Com isso, basta incluir o arquivo da bibliografia
+ usando o cabeçalho ou o comando de conversão.
+
+ \hypertarget{bibliografia}{%
+ \chapter*{Bibliografia}\label{bibliografia}}
+ \addcontentsline{toc}{chapter}{Bibliografia}
+
+ \hypertarget{refs}{}
+ \begin{CSLReferences}{0}{0}
+ \leavevmode\vadjust pre{\hypertarget{ref-Metaph_Ross_a}{}}%
+ ARISTÓTELES. \textbf{Metaphysics}. Ed.: W. D. Ross. v. 1 Oxford:
+ Clarendon Press, 1924.
+
+ \leavevmode\vadjust pre{\hypertarget{ref-Carr2005}{}}%
+ CARR, D.; STEUTEL, J. (Eds.). \textbf{Virtue Ethics and Moral
+ Education}. London: Routledge, 1999.
+
+ \leavevmode\vadjust pre{\hypertarget{ref-deHaas2004}{}}%
+ HAAS, F. DE; MANSFELD, J. (Eds.). \textbf{Aristotle' On Generation and
+ Corruption Book I}. Oxford: OUP, 2004.
+
+ \end{CSLReferences}
+
+\bookmarksetup{startatroot}
+
+\backmatter
+
+	\begingroup 
+		\let\clearpage\relax 
+	\endgroup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+					% Fim da parte principal
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+						% Backmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Bibliografia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%  \printglossary
+  \printindex
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ABNTeX-o-matic
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+								% Fim
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

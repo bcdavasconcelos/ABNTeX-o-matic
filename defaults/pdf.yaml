@@ -1,0 +1,3 @@
+verbosity: ERROR
+to: pdf
+pdf-engine: xelatex
