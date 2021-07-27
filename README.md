@@ -2,51 +2,63 @@
 
 *Em preparação*
 
-Uma tese ou dissertação pode ser preparada utilizando um processador de texto convencional, como o Word, ou utilizando apenas texto plano em Markdown — uma linguagem leve, simples e fácil de aprender. Dentre as vantagens oferecidas por esta última abordagem, encontramos a possibilidade de produzir um documento final de alta qualidade tipográfica em qualquer formato de divulgação concebível, como PDF, DOCX, HTML, EPUB, etc. Além de produzir resultados superiores, não há qualquer necessidade de gastar tempo formatando trabalhos e adequando-os às regras da ABNT. Isso acontece *automagicamente*. Tudo isso é possível graças a um conversor universal de documentos, gratuito e *open-source*, chamado Pandoc.
+Uma tese ou dissertação pode ser preparada utilizando um processador de texto convencional, como o Word, ou utilizando apenas texto plano em Markdown — uma linguagem leve, simples e fácil de aprender. Dentre as vantagens oferecidas por esta última abordagem, encontramos a possibilidade de produzir um documento final de alta qualidade tipográfica em qualquer formato de divulgação concebível, como PDF, DOCX, HTML, EPUB, LaTeX, XML, ODT, RTF, PPTX, etc. Além de produzir resultados superiores, não há qualquer necessidade de gastar tempo formatando trabalhos e adequando-os às regras da ABNT. Isso acontece *automagicamente*. Tudo isso é possível graças a um conversor universal de documentos, gratuito e *open-source*, chamado [Pandoc](https://pandoc.org).
 
 ## A necessidade de um modelo  
 
 A conversão de texto em markdown para arquivos PDF no Pandoc pode acontecer por duas vias: LaTeX ou HTML. Dizendo de outro modo, ele faz o caminho `Markdown → LaTeX → PDF` ou `Markdown → HTML → PDF`. Ambos pressupõe a existência de um modelo que determina onde cada elemento do arquivo de texto fonte deve aparecer no produto final — de outro modo o mecanismo de conversão não teria como saber qual parte do texto integra os elementos pré-textuais (*e.g.* abreviações, agradecimentos) e qual contém o corpo do texto.  
 
-O resultado de uma conversão utilizando LaTeX é bastante superior àquele que poderíamos obter via HTML. A preparação de um modelo, entretanto, é consideravelmente mais difícil. Todos os projetos que se encarregavam de manter modelos baseados nas normas da ABNT foram abandonados nos últimos anos e em Fev 2021 não havia qualquer opção funcional disponível para este fim. O **ABNTeX-o-matic** é uma tentativa de preencher esta falta e oferecer uma opção simples e prática para estudantes de qualquer universidade brasileira. Para quem estiver se perguntando acerca da origem do nome do projeto, trata-se de um chiste inspirado pelos projetos Pandoc, Pandocomatic e Scrivomatic.
+O resultado de uma conversão utilizando LaTeX é bastante superior àquele que poderíamos obter via HTML. A preparação de um modelo, entretanto, é consideravelmente mais difícil. Prova disso é que todos os projetos que se encarregavam de manter modelos baseados nas normas da ABNT foram abandonados ao longo destes últimos anos (e.g. [abnTeX](https://www.abntex.net.br)). Para preencher esta lacuna, criei este projeto template chamado **ABNTeX-o-matic**, que oferecer uma opção simples e prática para estudantes de qualquer universidade brasileira. A rigor, esse template diverge em detalhes muito pequenos das normas da ABNT. (As margens, por exemplo, não são 3, 3, 2, 2cm; ao invés disso, elas são automaticamente calculadas pelo mecanismo de conversão para obter o melhor resultado possível no posicionamento do texto.) Incorporar esta regra seria possível, mas os resultados são claramente inferiores.  
 
-O ABNTeX-o-matic nada mais é do que uma laboriosa adaptação do [Mimosis](https://github.com/Pseudomanifold/latex-mimosis) com inúmeros acréscimos para facilitar a produção de um documento final acabado sem a necessidade de editar arquivos em qualquer outro formato complexo (*e.g.* LaTeX). Tudo acontece automaticamente a partir do texto em markdown.
+O ABNTeX-o-matic nada mais é do que uma laboriosa adaptação do [Mimosis](https://github.com/Pseudomanifold/latex-mimosis) com inúmeros acréscimos para facilitar a produção de um documento final acabado sem a necessidade de editar arquivos em qualquer outro formato complexo (*e.g.* LaTeX). Tudo acontece automaticamente a partir do texto em markdown. Para transmitir ao modelo informações sobre a autora ou o autor, sobre a instituição, o local, etc., utilizamos um simples cabeçalho isolado do restante do texto por meio de três traços (`---`) acima e abaixo e contendo os campos e os dados necessários para gerar o arquivo da dissertação ou tese. (Esse cabeçalho está em um formato conhecido como [YAML](https://en.wikipedia.org/wiki/YAML), mas não há qualquer necessidade de conhecer suas minúcias e demais regras). 
+
+Para quem estiver se perguntando acerca da origem do nome do projeto, trata-se de um chiste inspirado pelos projetos [Pandoc](https://pandoc.org), [Pandocomatic](https://github.com/htdebeer/pandocomatic) e [Scrivomatic](https://github.com/iandol/scrivomatic).
 
 
 ## Funcionamento do template
 
-Todos os elementos do trabalho que não fazem parte do corpo do texto propriamente — isto é, dos capítulos centrais que são numerados — são geradas automaticamente a partir das variáveis que são inseridas do documento em blocos de código no formato YAML. 
+Todos os elementos do trabalho que não fazem parte do corpo do texto propriamente — isto é, dos capítulos centrais que são numerados — são geradas automaticamente a partir das variáveis que são inseridas do documento em blocos no formato YAML. 
 
 Blocos nesse formato devem respeitar as seguintes regras:
 
 - Delimite o bloco utilizando `---` antes do início e depois do fim. 
-- Sempre salte uma linha antes do início e depois do fim.
-- Eles podem ser inseridos em qualquer parte do texto, pois não fazem parte do texto propriamente e não aparecem no documento final nesse formato.
+- Sempre salte uma linha antes do início e depois do fim. (`---autor: Fulano` não funcionará).
+- Eles podem ser inseridos *em qualquer parte do texto*, pois **não fazem parte do texto** propriamente e **não aparecem no documento final nesse formato**.
 
 Este exemplo é baseado [na documentação](https://pandoc.org/MANUAL.html#metadata-blocks) do Pandoc:
 
 ```yaml
 ---
-title:  'Título'
-author:
-- Aristocles
-- Platão
-keywords: [forma, ideia]
-abstract: |
-  Resumo com múltiplos parágrafos.
-
-  É preciso saltar dois espaços em branco antes de dar início ao texto.
+title:  'Aspásia e a importância das mulheres na tradição filosófica socrática'
 ---
 ```
 
-O uso das aspas para proteger o valor de alguns campos é indicado sempre que houver algum caracter especial (*e.g.* uma vírgula) no texto. Na dúvida, proteja o valor utilizando aspas ou inserindo uma barra vertical `|` e registrando o valor na linha abaixo.
+O uso das aspas para proteger o valor de alguns campos é indicado sempre que houver algum caracter especial (*e.g.* uma vírgula) no texto. Na dúvida, proteja o valor utilizando aspas ou inserindo uma barra vertical `|` e registrando o valor na linha abaixo depois de saltar dois espaços em branco. Palavras-chave podem, teoricamente, ser inseridas entre colchetes utilizando uma vírgula como separador, mas o abnTeX-o-matic não faz uso dessa variável.
 
-Para a conveniência dos possíveis usuários, o template foi criado **com variáveis em português**. Deve-se utilizar, portanto, `autor` e não `author`, `titulo` e não `title`, e assim por diante.
+```yaml
+author:
+- Paula Carvalho
+- Valentina Tereshkova
+keywords: [forma, ideia, espaço]
+abstract: |
+  O resumo com múltiplos parágrafos fica mais fácil de ser escrito utilizando este formato com um traço vertical e uma nova linha começando com dois espaços em branco. 
+  
+  Cada nova linha que começar com dois espaços em branco fará parte do nosso resumo. Não há necessidade de utilizar aspas.
+---
+```
+
+Como o template foi criado sobretudo para trabalhos em língua portuguesa, as variáveis também estão, em sua maioria, em português. Deve-se utilizar, portanto, `autora` e não `author`, `titulo` e não `title`, e assim por diante. Eis uma lista das variáveis disponíveis que devem ser preenchidas: `sumario, autora, autor, titulo, instituicao, lugar, ano, trabalho, curso, instituicao, titulacao, orientadora, orientador, linhadepesquisa`.   
+
+Variáveis opcionais para elementos pré-textuais: `dedicatoria, agradecimentos, epigrafe, advertencia, resumo, abstract, abreviacoes`.  
+
+E, por fim, variáveis opcionais que controlam alguns aspectos da aparência do produto final: `creditos, indentarprimeiralinha, indentarprimeiralinhaem, compilado, mainfont, mainfontoptions, sansfont, sansfontoptions, monofont, colorlinks, linkcolor, citecolor, urlcolor, lang`.  
+
+A bibliografia pode ser especificada como uma variável também: `bibliography, bib-style, bib-title` ou incluída diretamente no comando que utilizaremos para fazer a conversão do texto.
 
 
 ## Capa e contracapa
 
-Para gerar uma capa, é preciso que se tenha definido as seguintes variáveis: `autor`, `titulo`, `instituicao`, `lugar` e `ano`. Se a capa não for gerada, isso é um indício de que alguma variável está sem valor.
+Para gerar uma capa, é preciso que se tenha definido as seguintes variáveis: `autor`/`autora`, `titulo`, `instituicao`, `lugar` e `ano`. Se a capa não for gerada, isso é um indício de que alguma variável está sem valor.
 
 ```yaml
 ---
@@ -58,7 +70,7 @@ ano: '2021'
 ---
 ```
 
-Para gerar uma contracapa, é preciso que se tenha definido as variáveis supracitadas e ainda: `contracapa` OU `grau`, `curso`, `tipodetrabalho`, `linhadepesquisa` e `orientador`.  
+Para gerar uma contracapa, é preciso que se tenha definido as variáveis supracitadas e ainda: `contracapa` OU `titulacao`, `curso`, `trabalho`, `linhadepesquisa` e `orientador`/`orientadora`.  
 
 **Opção 1:**  
 
@@ -72,9 +84,9 @@ contracapa: 'Tese apresentada ao programa de Pós-Graduação em Filosofia da Un
 
 ```yaml
 ---
-grau: 'Doutor'
+titulacao: 'Doutor'
 curso: 'Filosofia'
-tipodetrabalho: 'Tese'
+trabalho: 'Tese'
 linhadepesquisa: 'Filosofia Antiga e Medieval'
 ---
 ```
@@ -101,7 +113,7 @@ Uma outra opção, mais natural, envolve criar uma seção de texto para esses e
 
 # Dedicatoria
 
-Dedico o trabalho...
+Dedico este trabalho...
 
 # Agradecimentos
 
@@ -127,85 +139,27 @@ Uma advertência...
 
 **Observe que o título da seção deve ser idêntico ao nome da variável: sem qualquer acentos.**
 
+<br>
+
+---
+
+<br>
+
 ## Como funciona o Pandoc
-
-
 
 ![](/img/2021-02-17_19-57-26.png)
 ![](/img/2021-02-17_19-57-42.png)
 
-A rigor, esse template diverge em detalhes muito pequenos das normas da ABNT. As margens, por exemplo, não são 3,3,2,2cm; ao invés disso, elas são automaticamente calculadas pelo mecanismo de conversão para obter o melhor resultado possível no posicionamento do texto.  
 
 ## Fonte em Markdown
 
-Toda a tese pode ser gerada a partir de um simples arquivo em formato markdown com um cabeçalho YAML.
+Toda a tese pode ser gerada a partir de um simples arquivo em formato markdown com um cabeçalho YAML. [Veja aqui um exemplo de arquivo](https://github.com/bcdavasconcelos/ABNTeX-o-matic/blob/main/Sample.md).
 
-```markdown
----
-### Opções ###
-capa: true
-sumario: true
-alegreyamainfont: true
-mainfont: ''
-sansfont: ''
-monofont: ''
-### Metadados ###
-autor:
-titulo:
-faculdade:
-subtitulo:
-lugar:
-ano:
-tipodetrabalho:
-curso:
-faculdade:
-grau:
-orientador:
-linhadepesquisa:
-dedicatoria:
-agradecimentos:
-epigrafe:
-advertencia:
-resumo:
-abstract:
-abreviacoes:  
----
-
-
-# Capítulo 1
-
-Introdução ao capítulo 1
-
-## Seção 1
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (@Metaph_Ross_a, p. 134).
-
-## Seção 2
-
-Lorem ipsum dolor sit amet (@Rossi2013, p. 10), consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-# Capítulo 2
-
-Introdução ao capítulo 2
-
-## Seção 1
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (@Carr2005, p. 90).
-
-## Seção 2
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (@deHaas2004, p. 4).
-
-# Bibliografia {-}
-
-
-
-::: {#refs}
-:::
-
-```
 
 ## Comando para a conversão
+
+Utilizar o Pandoc para realizar a conversão de arquivos pode parecer uma tarefa intimidadora, pois ele não possue uma interface tradicional como um programa comum e pode ser utilizado apenas a partir da linha de comando. Por esse motivo, ofereço aqui instruções detalhadas e passo-a-passo. Siga as instruções e não terá nenhum problema.
+
 
 Adicione o arquivo `abntex-o-matic.latex` à pasta de templates do Pandoc.   
 
