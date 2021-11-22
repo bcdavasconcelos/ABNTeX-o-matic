@@ -131,7 +131,9 @@
 % Paracol e multicol
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{multicol} %\begin{multicols}{2}
-\usepackage{paracol} %\begin{paracol}{2}  \switchcolumn \end{paracol}
+\usepackage{paracol}
+\footnotelayout{m}
+ %\begin{paracol}{2}  \switchcolumn \end{paracol}
 \usepackage{array}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fonte pequenas e espaçamento simples nas citações

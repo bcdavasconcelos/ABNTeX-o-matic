@@ -15,12 +15,12 @@
             <Title>Capítulo 2</Title>
             <Text>Introdução ao capítulo 2</Text>
         </Document>
-        <Document ID="4C1C3E52-EEB3-448A-AB4A-4561DD84C333">
-            <Title>Elementos pós-textuais</Title>
-        </Document>
         <Document ID="002229F5-3B1E-452C-8D0A-835C50A2964F">
             <Title>Seção 2</Title>
             <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (@deHaas2004, p. 4).</Text>
+        </Document>
+        <Document ID="4C1C3E52-EEB3-448A-AB4A-4561DD84C333">
+            <Title>Elementos pós-textuais</Title>
         </Document>
         <Document ID="73268A6B-10D2-4577-A7E9-A8915F9C8470">
             <Title>Bibliografia</Title>
@@ -178,13 +178,6 @@ Atribua o tipo de seção Corpo do Texto a todos os arquivos e não deixe de pre
 Tipos de seção (recomendado)
 Na aba de metadados do inspetor (Navigate &gt; Inspect &gt; Metadata) ou no modo de visualização de contorno (⌘3) atribua o tipo de seção adequado ao arquivo ou então deixe o próprio Scrivener atribuir automaticamente o tipo adequado baseado na posição do arquivo no Binder. Arquivos de primeiro nível na pasta Manuscrito aparecerão como capítulos; arquivos de segundo nível, como seções; de terceiro nível, como subseções; de quarto nível, como parágrafos. Para maiores informações, veja Tipos de seção.</Text>
         </Document>
-        <Document ID="810A571B-D7A4-419E-A9FF-01E331428138">
-            <Title>Recursos</Title>
-        </Document>
-        <Document ID="85653140-9FD1-4FF6-98F7-4DF848572C44">
-            <Title>Pandocomatic</Title>
-            <Text>Em breve.</Text>
-        </Document>
         <Document ID="52AE15AD-FD89-4920-BFC3-AA76CE3208B5">
             <Title>ABNTex-o-matic</Title>
             <Text># Importante: arquivos YAML usam espaços em branco para representar a estrutura, então não use tabulações (tab) e lembre-se de deixar as aspas retas ("") e manter os nomes de todos os campos de metadados em caixa baixa.
@@ -260,6 +253,42 @@ compiled: &lt;$shortdate&gt; </Text>
 #    - epub-test     
 
 </Notes>
+        </Document>
+        <Document ID="85653140-9FD1-4FF6-98F7-4DF848572C44">
+            <Title>Pandocomatic</Title>
+            <Text>Em breve.</Text>
+        </Document>
+        <Document ID="810A571B-D7A4-419E-A9FF-01E331428138">
+            <Title>Recursos</Title>
+        </Document>
+        <Document ID="1C96664F-AAC5-43CF-9FE7-C7B89B676670">
+            <Title>Capa e contracapa</Title>
+            <Text>
+Para gerar uma capa, é preciso ter as seguintes variáveis: autor, titulo, instituicao, lugar e ano.
+Para gerar uma contracapa, é preciso ter as seguintes variáveis: contracapa OU grau, curso, tipodetrabalho, linhadepesquisa e orientador.</Text>
+        </Document>
+        <Document ID="782F544D-84B9-4358-B69C-CBCD37839C00">
+            <Title>Múltiplas bibliografias </Title>
+            <Text>Múltiplas bibliografias 
+
+multiple-bibliographies.lua
+
+---
+bibliography_main: main-bibliography.bib
+bibliography_software: software.bib
+---
+
+```
+# References
+
+::: {#refs_main}
+:::
+
+# Software
+
+::: {#refs_software}
+:::
+```</Text>
         </Document>
         <Document ID="3FECEF9B-D717-40CA-9C14-69A258C727AE">
             <Title>Abreviações</Title>
@@ -352,29 +381,6 @@ Minos
 Teages
 </Notes>
         </Document>
-        <Document ID="782F544D-84B9-4358-B69C-CBCD37839C00">
-            <Title>Múltiplas bibliografias </Title>
-            <Text>Múltiplas bibliografias 
-
-multiple-bibliographies.lua
-
----
-bibliography_main: main-bibliography.bib
-bibliography_software: software.bib
----
-
-```
-# References
-
-::: {#refs_main}
-:::
-
-# Software
-
-::: {#refs_software}
-:::
-```</Text>
-        </Document>
         <Document ID="9D2539A4-4C1F-4FE7-BD37-1350E0CC4257">
             <Title>Tipos de seção</Title>
             <Text>Configurações
@@ -407,12 +413,6 @@ O conteúdo entra no texto compilado, mas o nome do arquivo é ignorado.
 Anotações de pesquisa
 O nome do arquivo e o conteúdo são ignorados.</Text>
             <Comments>O texto contido no campo Notes pode ser apagado.</Comments>
-        </Document>
-        <Document ID="1C96664F-AAC5-43CF-9FE7-C7B89B676670">
-            <Title>Capa e contracapa</Title>
-            <Text>
-Para gerar uma capa, é preciso ter as seguintes variáveis: autor, titulo, instituicao, lugar e ano.
-Para gerar uma contracapa, é preciso ter as seguintes variáveis: contracapa OU grau, curso, tipodetrabalho, linhadepesquisa e orientador.</Text>
         </Document>
         <Document ID="F46AC63D-8977-4A04-9794-EB5886D89E30">
             <Title>Advertência</Title>
